@@ -12,28 +12,25 @@ class LoginFormControllerViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
  
     @IBOutlet weak var userNameLabel: UILabel!
-    
     @IBOutlet weak var passwordLabel: UILabel!
     @IBOutlet weak var userNameTextField: UITextField!
-    
     @IBOutlet weak var passwordTextField: UITextField!
+    
     @IBAction func loginButton(_ sender: Any) {
-        
-        // Получаем текст логина
-               let login = userNameTextField.text!
-               // Получаем текст-пароль
-               let password = passwordTextField.text!
-               
-               // Проверяем, верны ли они
-               if login == "admin" && password == "123456" {
-                   print("успешная авторизация")
-               } else {
-                   print("неуспешная авторизация")
-               }
-
-        
-        
+    
+    // Получаем текст логина
+           let login = userNameTextField.text!
+           // Получаем текст-пароль
+           let password = passwordTextField.text!
+           
+           // Проверяем, верны ли они
+           if login == "admin" && password == "123456" {
+               print("успешная авторизация")
+           } else {
+               print("неуспешная авторизация")
+           }
     }
+    
     
     // Когда клавиатура появляется
        @objc func keyboardWasShown(notification: Notification) {

@@ -67,6 +67,9 @@
                                         <rect key="frame" x="60" y="500" width="294" height="47"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                         <state key="normal" title="Войти"/>
+                                        <connections>
+                                            <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dQF-nB-nB5"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -96,7 +99,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="passwordLabel" destination="evv-CF-dgi" id="nGr-Rd-SBc"/>
+                        <outlet property="passwordTextField" destination="D36-E9-pWD" id="8wC-bX-AY1"/>
                         <outlet property="scrollView" destination="KHR-GR-Bwg" id="NXi-do-8dD"/>
+                        <outlet property="userNameLabel" destination="4II-wO-C10" id="8zo-N0-y3J"/>
+                        <outlet property="userNameTextField" destination="gIQ-V9-MZt" id="vjs-Io-NuR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
