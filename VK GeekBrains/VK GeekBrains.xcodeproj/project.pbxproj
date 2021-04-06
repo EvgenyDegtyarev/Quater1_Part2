@@ -13,6 +13,7 @@
 		E41E584C26162E2200AB9343 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E41E584B26162E2200AB9343 /* Assets.xcassets */; };
 		E41E584F26162E2200AB9343 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E41E584D26162E2200AB9343 /* LaunchScreen.storyboard */; };
 		E41E585926175AE500AB9343 /* LoginFormControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41E585826175AE500AB9343 /* LoginFormControllerViewController.swift */; };
+		E41E585C261B6BFC00AB9343 /* SomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41E585B261B6BFC00AB9343 /* SomePage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E41E584E26162E2200AB9343 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E41E585026162E2200AB9343 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E41E585826175AE500AB9343 /* LoginFormControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormControllerViewController.swift; sourceTree = "<group>"; };
+		E41E585B261B6BFC00AB9343 /* SomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomePage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				E41E584D26162E2200AB9343 /* LaunchScreen.storyboard */,
 				E41E585026162E2200AB9343 /* Info.plist */,
 				E41E585826175AE500AB9343 /* LoginFormControllerViewController.swift */,
+				E41E585B261B6BFC00AB9343 /* SomePage.swift */,
 			);
 			path = "VK GeekBrains";
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			files = (
 				E41E585926175AE500AB9343 /* LoginFormControllerViewController.swift in Sources */,
 				E41E584326162E1F00AB9343 /* AppDelegate.swift in Sources */,
+				E41E585C261B6BFC00AB9343 /* SomePage.swift in Sources */,
 				E41E584526162E1F00AB9343 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

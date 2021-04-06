@@ -17,18 +17,10 @@ class LoginFormControllerViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     
     @IBAction func loginButton(_ sender: Any) {
-    
-    // Получаем текст логина
-           let login = userNameTextField.text!
-           // Получаем текст-пароль
-           let password = passwordTextField.text!
-           
-           // Проверяем, верны ли они
-           if login == "admin" && password == "123456" {
-               print("успешная авторизация")
-           } else {
-               print("неуспешная авторизация")
-           }
+    }
+    @IBAction func unwindSegue(for unwindSegue: UIStoryboardSegue) {
+        self.userNameTextField.text = ""
+        self.passwordTextField.text = ""
     }
     
     
@@ -53,6 +45,7 @@ class LoginFormControllerViewController: UIViewController {
        }
     override func viewWillAppear(_ animated: Bool) {
             super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = true
             
             // Подписываемся на два уведомления: одно приходит при появлении клавиатуры
             NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWasShown), name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -61,10 +54,43 @@ class LoginFormControllerViewController: UIViewController {
         }
     override func viewWillDisappear(_ animated: Bool) {
             super.viewWillDisappear(animated)
-            
             NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
             NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
         }
+    
+   
+    
+    private func checkUserInfo() -> Bool {
+        guard
+            let username = userNameTextField.text,
+            let password = passwordTextField.text,
+            username == "admin",
+            password == "12345"
+        else {
+            presentError()
+            return false}
+        return true
+        
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        guard identifier == "goInside" else {
+            return false
+        }
+       return checkUserInfo()
+    }
+    
+    
+    private func presentError(with message: String = "Введены неверные данные пользователя") {
+        let alertController = UIAlertController(title: "Ошибка", message: message, preferredStyle: .alert)
+        let okButton = UIAlertAction(title: "Ok", style: .default) { _ in
+            self.userNameTextField.text = ""
+            self.passwordTextField.text = ""
+        } 
+        alertController.addAction(okButton)
+        present(alertController, animated: true)
+    }
+    
     @objc func hideKeyboard() {
             self.scrollView?.endEditing(true)
         }
