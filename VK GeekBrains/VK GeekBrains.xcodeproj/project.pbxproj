@@ -14,6 +14,14 @@
 		E41E584F26162E2200AB9343 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E41E584D26162E2200AB9343 /* LaunchScreen.storyboard */; };
 		E41E585926175AE500AB9343 /* LoginFormControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41E585826175AE500AB9343 /* LoginFormControllerViewController.swift */; };
 		E41E585C261B6BFC00AB9343 /* SomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41E585B261B6BFC00AB9343 /* SomePage.swift */; };
+		E41E58662622E3E000AB9343 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41E58652622E3E000AB9343 /* User.swift */; };
+		E41E58692622E48800AB9343 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41E58682622E48800AB9343 /* Group.swift */; };
+		E41E58712622E65400AB9343 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41E58702622E65400AB9343 /* UserCell.swift */; };
+		E41E58752622E66F00AB9343 /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41E58742622E66E00AB9343 /* GroupCell.swift */; };
+		E41E58792622EE6100AB9343 /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41E58782622EE6100AB9343 /* UsersTableViewController.swift */; };
+		E41E587C2623008300AB9343 /* GroupsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41E587B2623008300AB9343 /* GroupsTableViewController.swift */; };
+		E41E587F2623009200AB9343 /* AllGroupsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41E587E2623009200AB9343 /* AllGroupsTableViewController.swift */; };
+		E41E588A2623432500AB9343 /* FriendsPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41E58892623432500AB9343 /* FriendsPhotoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +34,14 @@
 		E41E585026162E2200AB9343 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E41E585826175AE500AB9343 /* LoginFormControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormControllerViewController.swift; sourceTree = "<group>"; };
 		E41E585B261B6BFC00AB9343 /* SomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomePage.swift; sourceTree = "<group>"; };
+		E41E58652622E3E000AB9343 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E41E58682622E48800AB9343 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		E41E58702622E65400AB9343 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		E41E58742622E66E00AB9343 /* GroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
+		E41E58782622EE6100AB9343 /* UsersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
+		E41E587B2623008300AB9343 /* GroupsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsTableViewController.swift; sourceTree = "<group>"; };
+		E41E587E2623009200AB9343 /* AllGroupsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupsTableViewController.swift; sourceTree = "<group>"; };
+		E41E58892623432500AB9343 /* FriendsPhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsPhotoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +74,56 @@
 		E41E584126162E1F00AB9343 /* VK GeekBrains */ = {
 			isa = PBXGroup;
 			children = (
+				E41E586D2622E5A800AB9343 /* Controllers */,
+				E41E586B2622E56E00AB9343 /* Views */,
+				E41E58642622E3C100AB9343 /* Models */,
 				E41E584226162E1F00AB9343 /* AppDelegate.swift */,
 				E41E584426162E1F00AB9343 /* SceneDelegate.swift */,
-				E41E584826162E1F00AB9343 /* Main.storyboard */,
 				E41E584B26162E2200AB9343 /* Assets.xcassets */,
 				E41E584D26162E2200AB9343 /* LaunchScreen.storyboard */,
 				E41E585026162E2200AB9343 /* Info.plist */,
-				E41E585826175AE500AB9343 /* LoginFormControllerViewController.swift */,
 				E41E585B261B6BFC00AB9343 /* SomePage.swift */,
 			);
 			path = "VK GeekBrains";
+			sourceTree = "<group>";
+		};
+		E41E58642622E3C100AB9343 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E41E58652622E3E000AB9343 /* User.swift */,
+				E41E58682622E48800AB9343 /* Group.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E41E586B2622E56E00AB9343 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E41E586F2622E61B00AB9343 /* Reusable */,
+				E41E584826162E1F00AB9343 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E41E586D2622E5A800AB9343 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E41E585826175AE500AB9343 /* LoginFormControllerViewController.swift */,
+				E41E58782622EE6100AB9343 /* UsersTableViewController.swift */,
+				E41E587B2623008300AB9343 /* GroupsTableViewController.swift */,
+				E41E587E2623009200AB9343 /* AllGroupsTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E41E586F2622E61B00AB9343 /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				E41E58702622E65400AB9343 /* UserCell.swift */,
+				E41E58742622E66E00AB9343 /* GroupCell.swift */,
+				E41E58892623432500AB9343 /* FriendsPhotoCell.swift */,
+			);
+			path = Reusable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,9 +197,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				E41E585926175AE500AB9343 /* LoginFormControllerViewController.swift in Sources */,
+				E41E587C2623008300AB9343 /* GroupsTableViewController.swift in Sources */,
+				E41E588A2623432500AB9343 /* FriendsPhotoCell.swift in Sources */,
+				E41E58692622E48800AB9343 /* Group.swift in Sources */,
+				E41E58792622EE6100AB9343 /* UsersTableViewController.swift in Sources */,
+				E41E587F2623009200AB9343 /* AllGroupsTableViewController.swift in Sources */,
 				E41E584326162E1F00AB9343 /* AppDelegate.swift in Sources */,
+				E41E58752622E66F00AB9343 /* GroupCell.swift in Sources */,
+				E41E58712622E65400AB9343 /* UserCell.swift in Sources */,
 				E41E585C261B6BFC00AB9343 /* SomePage.swift in Sources */,
 				E41E584526162E1F00AB9343 /* SceneDelegate.swift in Sources */,
+				E41E58662622E3E000AB9343 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
