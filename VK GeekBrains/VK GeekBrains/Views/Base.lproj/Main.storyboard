@@ -350,7 +350,7 @@
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <connections>
-                                    <outlet property="friendsPhotoImage" destination="Nrl-ao-H2u" id="LZc-jA-14j"/>
+                                    <outlet property="friendsPhotoImage" destination="Nrl-ao-H2u" id="sCW-tA-jMC"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
