@@ -54,6 +54,7 @@
                                     <outlet property="editingAccessoryView" destination="tSO-KU-HFE" id="sML-7P-QqD"/>
                                     <outlet property="userAvatarImage" destination="PkI-r2-VaK" id="jVT-DS-4Xe"/>
                                     <outlet property="userNameLabel" destination="aJj-D7-0aQ" id="MAI-9R-6B8"/>
+                                    <segue destination="kIT-uD-ASX" kind="show" identifier="showUserPhotos" id="vi6-o1-IlF"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -406,6 +407,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="rxQ-ro-apU"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1H0-jC-7hn">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

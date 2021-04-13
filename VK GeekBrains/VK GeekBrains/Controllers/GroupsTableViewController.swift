@@ -31,9 +31,6 @@ class GroupsTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
-   
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         groups.count
     }
@@ -58,4 +55,5 @@ class GroupsTableViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }
+    
 }

@@ -46,6 +46,18 @@ class UsersTableViewController: UITableViewController {
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard
+            segue.identifier == "showUserPhotos",
+            let destination = segue.destination as? FriendsPhotoCollectionViewController,
+            let index = tableView.indexPathForSelectedRow?.row
+        else { return }
+        destination.userImages = [friends[index].avatar]
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 
     /*
     // Override to support conditional editing of the table view.
