@@ -81,7 +81,7 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LoginFormControllerViewController" customModule="VK_GeekBrains" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="GradientView" customModule="VK_GeekBrains" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -171,6 +171,26 @@
                             <constraint firstItem="KHR-GR-Bwg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="WwC-Mk-4EY"/>
                             <constraint firstItem="KHR-GR-Bwg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="m2J-7x-9p0"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                <color key="value" systemColor="systemOrangeColor"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="startLocation">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="endLocation">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="point" keyPath="startPoint">
+                                <point key="value" x="0.0" y="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="point" keyPath="endPoint">
+                                <point key="value" x="0.0" y="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <navigationItem key="navigationItem" id="BYy-68-5sE"/>
                     <connections>
@@ -325,30 +345,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Zeb-xX-3qA">
-                            <size key="itemSize" width="167" height="151"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Zeb-xX-3qA">
+                            <size key="itemSize" width="380" height="380"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FriendsPhotoCell" id="MLV-lv-bYb" customClass="FriendPhotoViewCell" customModule="VK_GeekBrains" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="167" height="151"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="FriendsPhotoCell" translatesAutoresizingMaskIntoConstraints="NO" id="MLV-lv-bYb" customClass="FriendPhotoViewCell" customModule="VK_GeekBrains" customModuleProvider="target">
+                                <rect key="frame" x="17" y="0.0" width="380" height="380"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="kaV-se-opL" customClass="FriendsPhotoCell" customModule="VK_GeekBrains" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="167" height="151"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="zUc-Sg-4kB">
+                                    <rect key="frame" x="0.0" y="0.0" width="380" height="380"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nrl-ao-H2u">
-                                            <rect key="frame" x="4" y="4" width="159" height="143"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" layoutMarginsFollowReadableWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nrl-ao-H2u">
+                                            <rect key="frame" x="-1.0606060603649894" y="1.9242424242089555" width="380" height="380"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                         </imageView>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="Nrl-ao-H2u" secondAttribute="trailing" constant="4" id="Auh-bH-Esn"/>
-                                        <constraint firstAttribute="bottom" secondItem="Nrl-ao-H2u" secondAttribute="bottom" constant="4" id="hLp-Ia-ghA"/>
-                                        <constraint firstItem="Nrl-ao-H2u" firstAttribute="top" secondItem="kaV-se-opL" secondAttribute="top" constant="4" id="jbF-IZ-8LR"/>
-                                        <constraint firstItem="Nrl-ao-H2u" firstAttribute="leading" secondItem="kaV-se-opL" secondAttribute="leading" constant="4" id="sGv-xL-6n8"/>
-                                    </constraints>
                                 </collectionViewCellContentView>
                                 <connections>
                                     <outlet property="friendsPhotoImage" destination="Nrl-ao-H2u" id="sCW-tA-jMC"/>
@@ -428,6 +444,9 @@
         <image name="vk_logo_main" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

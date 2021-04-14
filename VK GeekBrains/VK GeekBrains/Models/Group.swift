@@ -10,4 +10,6 @@ import UIKit
 struct Group: Equatable {
     let name: String
     let avatar: UIImage?
+    
+  
 }

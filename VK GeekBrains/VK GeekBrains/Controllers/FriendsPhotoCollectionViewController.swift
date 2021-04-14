@@ -31,5 +31,13 @@ class FriendsPhotoCollectionViewController: UICollectionViewController {
         
         return cell
     }
-
+    
+   
+    
 }
+
+
+           
+        
+
+
