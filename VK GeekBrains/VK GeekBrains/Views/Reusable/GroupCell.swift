@@ -17,6 +17,5 @@ class GroupCell: UITableViewCell {
         groupImageView.image = image
         groupNameLabel.text = name
     }
-        
-    
+   
 }

@@ -23,8 +23,8 @@ class FriendPhotoViewCell: UICollectionViewCell {
 }
 
 class AvatarBackShadow: UIView {
-    @IBInspectable var shadowColor: UIColor = .lightGray
-    @IBInspectable var shadowOffset: CGSize = CGSize(width: 0.0, height: -3)
+    @IBInspectable var shadowColor: UIColor = .darkGray
+    @IBInspectable var shadowOffset: CGSize = CGSize(width: 5.0, height: -3)
     @IBInspectable var shadowOpacity: Float = 10.0
     @IBInspectable var shadowRadius: CGFloat = 10.0
     

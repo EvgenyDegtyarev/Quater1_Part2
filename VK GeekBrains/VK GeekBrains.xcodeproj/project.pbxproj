@@ -23,6 +23,7 @@
 		E41E587F2623009200AB9343 /* AllGroupsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41E587E2623009200AB9343 /* AllGroupsTableViewController.swift */; };
 		E41E588E26234DE000AB9343 /* FriendPhotoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41E588D26234DE000AB9343 /* FriendPhotoViewCell.swift */; };
 		E41E589126234DFF00AB9343 /* FriendsPhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41E589026234DFF00AB9343 /* FriendsPhotoCollectionViewController.swift */; };
+		E41E58992628BD9800AB9343 /* FriendsPhViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41E58982628BD9700AB9343 /* FriendsPhViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		E41E587E2623009200AB9343 /* AllGroupsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupsTableViewController.swift; sourceTree = "<group>"; };
 		E41E588D26234DE000AB9343 /* FriendPhotoViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendPhotoViewCell.swift; sourceTree = "<group>"; };
 		E41E589026234DFF00AB9343 /* FriendsPhotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsPhotoCollectionViewController.swift; sourceTree = "<group>"; };
+		E41E58982628BD9700AB9343 /* FriendsPhViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsPhViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				E41E587B2623008300AB9343 /* GroupsTableViewController.swift */,
 				E41E587E2623009200AB9343 /* AllGroupsTableViewController.swift */,
 				E41E589026234DFF00AB9343 /* FriendsPhotoCollectionViewController.swift */,
+				E41E58982628BD9700AB9343 /* FriendsPhViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				E41E58712622E65400AB9343 /* UserCell.swift in Sources */,
 				E41E585C261B6BFC00AB9343 /* SomePage.swift in Sources */,
 				E41E584526162E1F00AB9343 /* SceneDelegate.swift in Sources */,
+				E41E58992628BD9800AB9343 /* FriendsPhViewController.swift in Sources */,
 				E41E58662622E3E000AB9343 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

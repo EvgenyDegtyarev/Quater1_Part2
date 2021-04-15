@@ -19,7 +19,10 @@ class UserCell: UITableViewCell {
         userNameLabel.text = name
     }
     override func awakeFromNib() {
-        self.layer.cornerRadius = 10.0
+        super.awakeFromNib()
+        userAvatarImage.layer.cornerRadius = userAvatarImage.bounds.height / 2
+        userAvatarImage.layer.masksToBounds = true
+        }
     }
 
-}
+
