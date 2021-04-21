@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendCell" rowHeight="113" id="KGk-i7-Jjw" customClass="FriendCell" customModule="VK_GeekBrains" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="640" height="113"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM" customClass="AvatarBackShadow" customModule="VK_GeekBrains" customModuleProvider="target">
+                <rect key="frame" x="0.0" y="0.0" width="640" height="113"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ipm-ya-hOo" customClass="AvatarBackShadow" customModule="VK_GeekBrains" customModuleProvider="target">
+                        <rect key="frame" x="30" y="21" width="51" height="50"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RX1-Ry-Mmv" customClass="AvatarImage" customModule="VK_GeekBrains" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="51" height="50"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="RX1-Ry-Mmv" secondAttribute="bottom" id="0Mi-or-RHh"/>
+                            <constraint firstItem="RX1-Ry-Mmv" firstAttribute="leading" secondItem="ipm-ya-hOo" secondAttribute="leading" id="QXi-e9-EIy"/>
+                            <constraint firstItem="RX1-Ry-Mmv" firstAttribute="top" secondItem="ipm-ya-hOo" secondAttribute="top" id="Rvo-0w-aag"/>
+                            <constraint firstAttribute="width" secondItem="ipm-ya-hOo" secondAttribute="height" constant="1" id="ZZw-bo-Uy4"/>
+                            <constraint firstAttribute="height" constant="50" id="msI-la-l9D"/>
+                            <constraint firstAttribute="trailing" secondItem="RX1-Ry-Mmv" secondAttribute="trailing" id="qh4-39-SNf"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CYx-eF-y74">
+                        <rect key="frame" x="93" y="35.5" width="517" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="CYx-eF-y74" secondAttribute="trailing" constant="10" id="B2I-Pc-K03"/>
+                    <constraint firstItem="CYx-eF-y74" firstAttribute="leading" secondItem="RX1-Ry-Mmv" secondAttribute="trailing" constant="12" id="K2l-Pe-jx9"/>
+                    <constraint firstItem="ipm-ya-hOo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="egb-m3-Tru"/>
+                    <constraint firstItem="CYx-eF-y74" firstAttribute="centerY" secondItem="RX1-Ry-Mmv" secondAttribute="centerY" id="hJn-6i-zFy"/>
+                    <constraint firstItem="ipm-ya-hOo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="ynX-bF-svb"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="friendNameLabel" destination="hJn-6i-zFy" id="sdA-uU-wJK"/>
+                <outlet property="friendPhotoImage" destination="RX1-Ry-Mmv" id="ggL-k7-5Fk"/>
+            </connections>
+            <point key="canvasLocation" x="43.478260869565219" y="-29.129464285714285"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -16,9 +16,14 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="luk-BC-UE0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Имя Фамилия" id="5zq-sQ-3Ip">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserCell" id="8fp-3Y-sBw" customClass="UserCell" customModule="VK_GeekBrains" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="58.5"/>
+                                <rect key="frame" x="0.0" y="72" width="414" height="58.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8fp-3Y-sBw" id="tSO-KU-HFE">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="58.5"/>
@@ -98,33 +103,33 @@
                                         <rect key="frame" x="60" y="252" width="294" height="98"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="daU-U0-dOA">
-                                                <rect key="frame" x="0.0" y="0.0" width="87.5" height="98"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="98" height="98"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4II-wO-C10" userLabel="UserNameLabel">
-                                                        <rect key="frame" x="0.0" y="0.0" width="87.5" height="34"/>
-                                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="18"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="98" height="34"/>
+                                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="18"/>
                                                         <color key="textColor" red="0.0" green="0.40000000000000002" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evv-CF-dgi" userLabel="PasswordLabel">
-                                                        <rect key="frame" x="0.0" y="64" width="87.5" height="34"/>
-                                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="18"/>
+                                                        <rect key="frame" x="0.0" y="64" width="98" height="34"/>
+                                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="18"/>
                                                         <color key="textColor" red="0.0" green="0.40000000000000002" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="UvR-Sy-APr">
-                                                <rect key="frame" x="131.5" y="0.0" width="162.5" height="98"/>
+                                                <rect key="frame" x="142" y="0.0" width="152" height="98"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gIQ-V9-MZt" userLabel="UserNameTextField">
-                                                        <rect key="frame" x="0.0" y="0.0" width="162.5" height="34"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="152" height="34"/>
                                                         <color key="textColor" red="0.0" green="0.40000000000000002" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" textContentType="username"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D36-E9-pWD" userLabel="PasswordTextField">
-                                                        <rect key="frame" x="0.0" y="64" width="162.5" height="34"/>
+                                                        <rect key="frame" x="0.0" y="64" width="152" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                                     </textField>
@@ -133,9 +138,11 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Lq-QC-1Ab" userLabel="ButtonLogin">
-                                        <rect key="frame" x="60" y="500" width="294" height="59"/>
-                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
-                                        <state key="normal" title="Login"/>
+                                        <rect key="frame" x="60" y="500" width="294" height="47"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="30"/>
+                                        <state key="normal" title="Login">
+                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dQF-nB-nB5"/>
                                             <segue destination="zFt-gd-GH2" kind="presentation" identifier="goInside" modalPresentationStyle="fullScreen" id="PDg-qb-REs"/>
@@ -213,9 +220,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="jov-Xy-F2q">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="239"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="community" translatesAutoresizingMaskIntoConstraints="NO" id="nNs-cs-zbw">
+                                    <rect key="frame" x="5" y="5" width="404" height="229"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="nNs-cs-zbw" secondAttribute="trailing" constant="5" id="4oG-Vx-4mb"/>
+                                <constraint firstItem="nNs-cs-zbw" firstAttribute="leading" secondItem="jov-Xy-F2q" secondAttribute="leading" constant="5" id="BQe-hJ-84Y"/>
+                                <constraint firstAttribute="bottom" secondItem="nNs-cs-zbw" secondAttribute="bottom" constant="5" id="ZoK-dP-zBr"/>
+                                <constraint firstItem="nNs-cs-zbw" firstAttribute="top" secondItem="jov-Xy-F2q" secondAttribute="top" constant="5" id="wAa-Ep-yNs"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GroupCell" id="EOd-tD-E2T" customClass="GroupCell" customModule="VK_GeekBrains" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="58.5"/>
+                                <rect key="frame" x="0.0" y="267" width="414" height="58.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EOd-tD-E2T" id="eIC-0Q-5mz">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="58.5"/>
@@ -340,7 +363,6 @@
         <!--Friends Photo Collection View Controller-->
         <scene sceneID="Y1F-hR-nub">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aTN-sH-A56" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <collectionViewController id="kIT-uD-ASX" customClass="FriendsPhotoCollectionViewController" customModule="VK_GeekBrains" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="THk-oe-x6J">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -353,10 +375,10 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="FriendsPhotoCell" translatesAutoresizingMaskIntoConstraints="NO" id="MLV-lv-bYb" customClass="FriendPhotoViewCell" customModule="VK_GeekBrains" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" reuseIdentifier="FriendsPhotoCell" translatesAutoresizingMaskIntoConstraints="NO" id="MLV-lv-bYb" customClass="FriendPhotoViewCell" customModule="VK_GeekBrains" customModuleProvider="target">
                                 <rect key="frame" x="17" y="0.0" width="380" height="380"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="zUc-Sg-4kB">
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="zUc-Sg-4kB" customClass="AvatarBackShadow" customModule="VK_GeekBrains" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="380" height="380"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
@@ -367,16 +389,18 @@
                                         </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KP3-kv-cZb">
                                             <rect key="frame" x="10" y="350" width="360" height="25"/>
-                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                             <color key="tintColor" systemColor="systemRedColor"/>
-                                            <size key="titleShadowOffset" width="-1" height="0.0"/>
                                             <state key="normal" title="Мне нравится" image="heart" catalog="system">
                                                 <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24" weight="thin"/>
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24" scale="medium" weight="thin"/>
                                             </state>
                                             <state key="selected" image="heart.fill" catalog="system"/>
+                                            <connections>
+                                                <action selector="isLikedButton:" destination="MLV-lv-bYb" eventType="touchUpInside" id="6GG-lm-mK2"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -387,12 +411,14 @@
                                 </collectionViewCellContentView>
                                 <connections>
                                     <outlet property="friendsPhotoImage" destination="Nrl-ao-H2u" id="sCW-tA-jMC"/>
+                                    <outlet property="likeButton" destination="KP3-kv-cZb" id="Tc4-y8-ghx"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
                     </collectionView>
                     <navigationItem key="navigationItem" id="gii-KB-vfi"/>
                 </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aTN-sH-A56" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4602.898550724638" y="-291.29464285714283"/>
         </scene>
@@ -505,11 +531,15 @@
     <resources>
         <image name="DaryaDegtyareva" width="400" height="400"/>
         <image name="arrowshape.turn.up.backward.fill" catalog="system" width="128" height="106"/>
+        <image name="community" width="600" height="400"/>
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="person.2.fill" catalog="system" width="128" height="80"/>
         <image name="person.3.fill" catalog="system" width="128" height="61"/>
         <image name="vk_logo_main" width="512" height="512"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -10,15 +10,34 @@ import UIKit
 class AllGroupsTableViewController: UITableViewController {
     
     let groups = [
-    Group(name: "Работа", avatar: UIImage(named: "work.png")),
-    Group(name: "Семья", avatar: UIImage(named: "family.png")),
-    Group(name: "Спорт", avatar: UIImage(named: "sport.png")),
-    Group(name: "История", avatar: UIImage(named: "history.png")),
-    Group(name: "Будущее", avatar: UIImage(named: "future.png")),
-    Group(name: "Хобби", avatar: UIImage(named: "hobbies.png")),
-    Group(name: "Соседи", avatar: UIImage(named: "neighbours.png")),
-    Group(name: "Авто", avatar: UIImage(named: "cars.png")),
-        
+        Group(name: "Работа",
+              avatar: UIImage(named: "work.png")),
+        Group(name: "Семья",
+              avatar: UIImage(named: "family.png")),
+        Group(name: "Спорт",
+              avatar: UIImage(named: "sport.png")),
+        Group(name: "История",
+              avatar: UIImage(named: "history.png")),
+        Group(name: "Будущее",
+              avatar: UIImage(named: "future.png")),
+        Group(name: "Хобби",
+              avatar: UIImage(named: "hobbies.png")),
+        Group(name: "Соседи",
+              avatar: UIImage(named: "neighbours.png")),
+        Group(name: "Авто",
+              avatar: UIImage(named: "cars.png")),
+        Group(name: "Выпуск 2007",
+              avatar: UIImage(named: "naImage.png")),
+        Group(name: "Встреча одноклассников",
+              avatar: UIImage(named: "naImage.png")),
+        Group(name: "Отпуск 2022",
+              avatar: UIImage(named: "naImage.png")),
+        Group(name: "Коллеги",
+              avatar: UIImage(named: "naImage.png")),
+        Group(name: "ФК Зенит",
+              avatar: UIImage(named: "naImage.png")),
+        Group(name: "Театр Комиссаржевской",
+              avatar: UIImage(named: "naImage.png")),
     ]
     
 

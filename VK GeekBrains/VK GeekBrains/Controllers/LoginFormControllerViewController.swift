@@ -64,8 +64,8 @@ class LoginFormControllerViewController: UIViewController {
         guard
             let username = userNameTextField.text,
             let password = passwordTextField.text,
-            username == "admin",
-            password == "12345"
+            username == "",
+            password == ""
         else {
             presentError()
             return false}

@@ -9,26 +9,144 @@ import UIKit
 
 class UsersTableViewController: UITableViewController {
     
-    var friends = [User(name: "Евгений", surname: "Дегтярев", avatar: UIImage(named: "EvgenyDegtyarev")),
-                    User(name: "Дарья", surname: "Дегтярева", avatar: UIImage(named: "DaryaDegtyareva") ),
-                    User(name: "Дмитрий", surname: "Караваев", avatar: UIImage(named: "DmitriKaravaev")),
-                    User(name: "Дарья", surname: "Караваева", avatar: UIImage(named: "DaryaKaravaeva")),
-                    User(name: "Дмитрий", surname: "Калиниченко", avatar: UIImage(named: "DmitriKalinichenko")),
-                    User(name: "Александра", surname: "Калиниченко", avatar: UIImage(named: "AlexandraKalinichenko")),
-                    User(name: "Павел", surname: "Прокофьев", avatar: UIImage(named: "PavelProkofiev")),
-                    User(name: "Тамара", surname: "Прокофьева", avatar: UIImage(named: "TomaProkofieva")),
-                    User(name: "Алексей", surname: "Владимиров", avatar: UIImage(named: "AlexeyVladimirov")),
-                         User(name: "Илона", surname: "Владимирова", avatar: UIImage(named: "IlonaVladimirova")),
-                    User(name: "Валерий", surname: "Дегтярев", avatar: UIImage(named: "ValeriiDegtyarev.png")),
-                    User(name: "Ирина", surname: "Дегтярева", avatar: UIImage(named: "IrinaDegtyareva.png")),
+    var friends = [User(name: "Евгений",
+                        surname: "Дегтярев",
+                        avatar: UIImage(named: "EvgenyDegtyarev")),
+                    User(name: "Дарья",
+                         surname: "Дегтярева",
+                         avatar: UIImage(named: "DaryaDegtyareva") ),
+                    User(name: "Дмитрий",
+                         surname: "Караваев",
+                         avatar: UIImage(named: "DmitriKaravaev")),
+                    User(name: "Дарья",
+                         surname: "Караваева",
+                         avatar: UIImage(named: "DaryaKaravaeva")),
+                    User(name: "Дмитрий",
+                         surname: "Калиниченко",
+                         avatar: UIImage(named: "DmitriKalinichenko")),
+                    User(name: "Александра",
+                         surname: "Калиниченко",
+                         avatar: UIImage(named: "AlexandraKalinichenko")),
+                    User(name: "Павел",
+                         surname: "Прокофьев",
+                         avatar: UIImage(named: "PavelProkofiev")),
+                    User(name: "Тамара",
+                         surname: "Прокофьева",
+                         avatar: UIImage(named: "TomaProkofieva")),
+                    User(name: "Алексей",
+                         surname: "Владимиров",
+                         avatar: UIImage(named: "AlexeyVladimirov")),
+                         User(name: "Илона",
+                              surname: "Владимирова",
+                              avatar: UIImage(named: "IlonaVladimirova")),
+                    User(name: "Валерий",
+                         surname: "Дегтярев",
+                         avatar: UIImage(named: "ValeriiDegtyarev.png")),
+                    User(name: "Ирина",
+                         surname: "Дегтярева",
+                         avatar: UIImage(named: "IrinaDegtyareva.png")),
+                    User(name: " Антон",
+                         surname: "Андреев",
+                         avatar: UIImage(named: "naImage.png")),
+                    User(name: " Борис",
+                         surname: "Борисов",
+                         avatar: UIImage(named: "naImage.png")),
+                    User(name: " Валентин",
+                         surname: "Владимиров",
+                         avatar: UIImage(named: "naImage.png")),
+                    User(name: " Георгий",
+                         surname: "Гореев",
+                         avatar: UIImage(named: "naImage.png")),
+                    User(name: " Евгений",
+                         surname: "Евстегнеев",
+                         avatar: UIImage(named: "naImage.png")),
+                    User(name: " Жота",
+                         surname: "Жиев",
+                         avatar: UIImage(named: "naImage.png")),
+                    User(name: " Заур",
+                         surname: "Зуев",
+                         avatar: UIImage(named: "naImage.png")),
+                    User(name: " Иван",
+                         surname: "Иванов",
+                         avatar: UIImage(named: "naImage.png")),
+                    User(name: " Константин",
+                         surname: "Крутов",
+                         avatar: UIImage(named: "naImage.png")),
+                    User(name: " Лариса",
+                         surname: "Лю",
+                         avatar: UIImage(named: "naImage.png")),
+                    User(name: " Марина",
+                         surname: "Моисеева",
+                         avatar: UIImage(named: "naImage.png")),
+                    User(name: " Николай",
+                         surname: "Николаеевич",
+                         avatar: UIImage(named: "naImage.png")),
+                    User(name: " Ольга",
+                         surname: "Остина",
+                         avatar: UIImage(named: "naImage.png")),
+                    User(name: " Петр",
+                         surname: "Петров",
+                         avatar: UIImage(named: "naImage.png")),
+                    User(name: " Роман",
+                         surname: "Романов",
+                         avatar: UIImage(named: "naImage.png")),
+                    User(name: " Стас",
+                         surname: "Собачкин",
+                         avatar: UIImage(named: "naImage.png")),
+                    User(name: " Татьяна",
+                         surname: "Тимченко",
+                         avatar: UIImage(named: "naImage.png")),
+                    User(name: "Ульяна",
+                         surname: "Умная",
+                         avatar: UIImage(named: "naImage.png")),
+                    User(name: "Федор",
+                         surname: "Федоров",
+                         avatar: UIImage(named: "naImage.png")),
+                    User(name: "Хаид",
+                         surname: "Халили",
+                         avatar: UIImage(named: "naImage.png")),
+                    User(name: "Шура",
+                         surname: "Шурин",
+                         avatar: UIImage(named: "naImage.png")),
+                    User(name: "Юля",
+                         surname: "Юнеева",
+                         avatar: UIImage(named: "naImage.png")),
+                    User(name: "Янис",
+                         surname: "Ятов",
+                         avatar: UIImage(named: "naImage.png")),
     ]
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let nib = UINib(nibName: "FriendCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "FriendCell")
+        
+        
+        friends.sort(by:
+                        { $0.surname < $1.surname }
+            )
+        var surnames: [String] = []
+        friends.forEach {
+        surnames.append($0.surname)
+        }
+        let firstLetters = surnames.map{
+            String($0.first!)
+        }
+        var lettersForHeaders = Array(Set(firstLetters))
+        lettersForHeaders.sort(by: { $0 < $1 })
+        
 
+        var dictionary: [Character: [User]] = [:]
+
+        for (index, element) in lettersForHeaders.enumerated() {
+            dictionary[element] = User[index]
+        }
+        
     }
 
-    // MARK: - Table view data source
+  
 
   
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -59,49 +177,5 @@ class UsersTableViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
     }
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+ 
 }

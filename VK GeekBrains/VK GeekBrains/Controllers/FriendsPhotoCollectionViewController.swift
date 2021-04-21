@@ -10,7 +10,6 @@ import UIKit
 
 
 class FriendsPhotoCollectionViewController: UICollectionViewController {
-
     var userImages = [UIImage?]()
     
     override func viewDidLoad() {
@@ -31,9 +30,17 @@ class FriendsPhotoCollectionViewController: UICollectionViewController {
         
         return cell
     }
-    
-   
-    
+}
+
+extension FriendsPhotoCollectionViewController: UIGestureRecognizerDelegate {
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer,
+                           shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer,
+                           shouldRequireFailureOf otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
 }
 
 

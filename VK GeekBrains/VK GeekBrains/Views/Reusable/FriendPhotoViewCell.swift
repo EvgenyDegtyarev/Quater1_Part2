@@ -10,6 +10,13 @@ import UIKit
 class FriendPhotoViewCell: UICollectionViewCell {
     
     @IBOutlet weak var friendsPhotoImage: UIImageView!
+    @IBOutlet weak var likeButton: UIButton!
+    private var likeCounter = 0
+    
+    @IBAction func isLikedButton(_ sender: Any) {
+        
+        likeButton.isSelected.toggle()
+    }
     
     @IBInspectable var borderColor: UIColor = .blue
     @IBInspectable var borderWidth: CGFloat = 5.0
@@ -19,6 +26,15 @@ class FriendPhotoViewCell: UICollectionViewCell {
         self.layer.masksToBounds = true
         self.layer.borderWidth = borderWidth
         self.layer.borderColor = borderColor.cgColor
+        
+        configureLike()
+    }
+    
+    private func configureLike() {
+        self.likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
+        self.likeButton.setImage(UIImage(systemName: "heart.fill"), for: .selected)
+        self.likeButton.setTitle(String(likeCounter), for: .normal)
+        self.likeButton.setTitle(String(likeCounter+1), for: .selected)
     }
 }
 
@@ -36,5 +52,4 @@ class AvatarBackShadow: UIView {
         self.layer.shadowOpacity = shadowOpacity
         self.layer.shadowRadius = shadowRadius
     }
- 
 }
