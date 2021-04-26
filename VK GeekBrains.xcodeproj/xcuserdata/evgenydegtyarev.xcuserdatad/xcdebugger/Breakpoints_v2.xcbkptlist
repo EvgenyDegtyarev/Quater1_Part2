@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bucket
-   uuid = "5164A62C-4ACC-491A-BFBC-A8E2D53E962D"
+   uuid = "4B639B12-32AE-49CC-9776-7549BFBDBD82"
    type = "1"
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B208A755-B57E-47D4-B249-3FBF8DB8F0A3"
-            shouldBeEnabled = "Yes"
+            uuid = "38ED7BED-D249-416E-8FCE-C6CE4AC63B58"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "VK GeekBrains/Controllers/FriendsPhotoCollectionViewController.swift"
+            filePath = "VK GeekBrains/Controllers/UsersTableViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "gestureRecognizer(_:shouldRecognizeSimultaneouslyWith:)"
+            startingLineNumber = "154"
+            endingLineNumber = "154"
+            landmarkName = "sortUsers(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "23BEB5D4-9518-44F1-9AA4-0B1A6D4B6A07"
-            shouldBeEnabled = "Yes"
+            uuid = "DA9D2382-84E0-490C-ABDC-A34853984C74"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "VK GeekBrains/Controllers/FriendsPhotoCollectionViewController.swift"
+            filePath = "VK GeekBrains/Controllers/UsersTableViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "gestureRecognizer(_:shouldRequireFailureOf:)"
+            startingLineNumber = "165"
+            endingLineNumber = "165"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

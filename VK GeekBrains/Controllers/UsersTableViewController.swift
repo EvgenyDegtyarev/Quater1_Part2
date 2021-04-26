@@ -36,9 +36,9 @@ class UsersTableViewController: UITableViewController {
                     User(name: "Алексей",
                          surname: "Владимиров",
                          avatar: UIImage(named: "AlexeyVladimirov")),
-                         User(name: "Илона",
-                              surname: "Владимирова",
-                              avatar: UIImage(named: "IlonaVladimirova")),
+                    User(name: "Илона",
+                         surname: "Владимирова",
+                         avatar: UIImage(named: "IlonaVladimirova")),
                     User(name: "Валерий",
                          surname: "Дегтярев",
                          avatar: UIImage(named: "ValeriiDegtyarev.png")),
@@ -115,7 +115,46 @@ class UsersTableViewController: UITableViewController {
                          surname: "Ятов",
                          avatar: UIImage(named: "naImage.png")),
     ]
-   
+    
+    var searchFriends = [User]()
+    var isSerching = false
+    
+    
+    var characters: [Character] = []
+    var sortedUsers: [Character: [User]] = [:]
+    func sortUsers (_ users: [User]) -> (characters: [Character], sortedUsers: [Character: [User]]){
+
+            var characters = [Character]()
+
+            var sortedUsers = [Character: [User]]()
+
+            self.friends.forEach { user in
+
+                guard let firstLetter = user.surname.first else {return}
+
+                if var letterInUsers = sortedUsers[firstLetter]{
+
+                    letterInUsers.append(user)
+
+                    sortedUsers[firstLetter] = letterInUsers
+
+                } else {
+
+                    sortedUsers[firstLetter] = [user]
+
+                    characters.append(firstLetter)
+
+                }
+
+            }
+
+            characters.sort()
+
+            return (characters, sortedUsers)
+     
+        }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -124,10 +163,12 @@ class UsersTableViewController: UITableViewController {
         tableView.register(nib, forCellReuseIdentifier: "FriendCell")
         
         
+       
+        
         friends.sort(by:
                         { $0.surname < $1.surname }
             )
-        var surnames: [String] = []
+            /*var surnames: [String] = []
         friends.forEach {
         surnames.append($0.surname)
         }
@@ -136,32 +177,55 @@ class UsersTableViewController: UITableViewController {
         }
         var lettersForHeaders = Array(Set(firstLetters))
         lettersForHeaders.sort(by: { $0 < $1 })
+        */
         
-
-        var dictionary: [Character: [User]] = [:]
-
-        for (index, element) in lettersForHeaders.enumerated() {
-            dictionary[element] = User[index]
-        }
-        
+                
+       
     }
 
   
 
   
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-     
-        return friends.count
+        if !isSerching {
+            return friends.count
+            
+        } else {
+            return searchFriends.count
+        }
     }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        1
+        //sortedUsers.count
+    }
+  
+   
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "UserCell", for: indexPath) as? UserCell else { return UITableViewCell()}
-        let currentFriend = friends[indexPath.row]
-
-        cell.configure(image: currentFriend.avatar, name: currentFriend.fullname)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "FriendCell", for: indexPath) as? FriendCell else { return UITableViewCell()}
+        
+        let currentFriend = !isSerching ? friends[indexPath.row] : searchFriends[indexPath.row]
+        
+        cell.configure(fullname: currentFriend.fullname, image: currentFriend.avatar)
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        
+       // for (characters, [User]) in sortedUsers {
+          
+       // }
+        
+        
+       switch section {
+                case 0:
+                    return "h"
+                default:
+                    return "f"
+               }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -173,9 +237,33 @@ class UsersTableViewController: UITableViewController {
         destination.userImages = [friends[index].avatar]
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        print(identifier)
+        return true
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        defer { tableView.deselectRow(at: indexPath, animated: true) }
+        guard let friendPhotosVC = UIStoryboard(
+                name: "Main",
+                bundle: nil)
+            .instantiateViewController(identifier: "FriendsPhotoCollectionViewController")
+                as? FriendsPhotoCollectionViewController
+        else { return }
+        friendPhotosVC.userImages = [friends[indexPath.row].avatar]
+        navigationController?.pushViewController(friendPhotosVC, animated: true)
+    }
+}
 
- 
+extension UsersTableViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        defer { tableView.reloadData() }
+        if !searchText.isEmpty {
+            searchFriends = friends.filter { $0.fullname.contains(searchText) }
+            isSerching = true
+        } else {
+            isSerching = false
+        }
+        
+    }
 }

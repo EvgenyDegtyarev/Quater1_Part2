@@ -16,6 +16,7 @@ class FriendPhotoViewCell: UICollectionViewCell {
     @IBAction func isLikedButton(_ sender: Any) {
         
         likeButton.isSelected.toggle()
+        animation()
     }
     
     @IBInspectable var borderColor: UIColor = .blue
@@ -36,7 +37,17 @@ class FriendPhotoViewCell: UICollectionViewCell {
         self.likeButton.setTitle(String(likeCounter), for: .normal)
         self.likeButton.setTitle(String(likeCounter+1), for: .selected)
     }
-}
+    
+    func animation() {
+        UIView.transition(with: friendsPhotoImage,
+                          duration: 0.5,
+                          options: [.transitionFlipFromLeft, .curveEaseInOut]) {
+            
+        } 
+ 
+    }
+    
+
 
 class AvatarBackShadow: UIView {
     @IBInspectable var shadowColor: UIColor = .darkGray
@@ -52,4 +63,7 @@ class AvatarBackShadow: UIView {
         self.layer.shadowOpacity = shadowOpacity
         self.layer.shadowRadius = shadowRadius
     }
+}
+
+
 }
