@@ -19,14 +19,14 @@ class FriendPhotoViewCell: UICollectionViewCell {
         animation()
     }
     
-    @IBInspectable var borderColor: UIColor = .blue
+    
     @IBInspectable var borderWidth: CGFloat = 5.0
     
     override func awakeFromNib() {
-        self.layer.cornerRadius = 75.0
-        self.layer.masksToBounds = true
-        self.layer.borderWidth = borderWidth
-        self.layer.borderColor = borderColor.cgColor
+       // self.layer.cornerRadius = 75.0
+        //self.layer.masksToBounds = true
+        //self.layer.borderWidth = borderWidth
+        
         
         configureLike()
     }

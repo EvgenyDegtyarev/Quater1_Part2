@@ -7,11 +7,19 @@
 
 import UIKit
 
-class FriendCell: UITableViewCell {
+protocol UserCellDelegate: AnyObject {
+    func didPressUpdate(indexpath: IndexPath)
+}
 
-    @IBOutlet weak var friendPhotoImage: AvatarImage!
+class FriendCell: UITableViewCell {
+    weak var delegate: UserCellDelegate?
     
+    @IBOutlet weak var friendPhotoImage: AvatarImage!
     @IBOutlet weak var friendNameLabel: UILabel!
+    
+    @IBAction func someButton() {
+        delegate?.didPressUpdate(indexpath: IndexPath(item: 0, section: 0))
+    }
     
     func configure(
         fullname: String,

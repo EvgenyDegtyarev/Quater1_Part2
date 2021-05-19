@@ -14,11 +14,13 @@ class FriendsPhotoCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
 
-    // MARK: UICollectionViewDataSource
+   
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        userImages.count
+        return userImages.count
+        
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -30,7 +32,16 @@ class FriendsPhotoCollectionViewController: UICollectionViewController {
         
         return cell
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "FullPhotoFriend" else { return }
+        guard let destination = segue.destination as? FullPhotoController else { return }
+        destination.userImages = userImages
+        destination.imageIndex = collectionView.indexPathsForSelectedItems?.first?.row ?? 0
+    }
 }
+
+
 
 extension FriendsPhotoCollectionViewController: UIGestureRecognizerDelegate {
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer,
@@ -42,9 +53,3 @@ extension FriendsPhotoCollectionViewController: UIGestureRecognizerDelegate {
         return true
     }
 }
-
-
-           
-        
-
-

@@ -11,7 +11,12 @@ class GroupCell: UITableViewCell {
 
     @IBOutlet weak var groupImageView: UIImageView!
     @IBOutlet weak var groupNameLabel: UILabel!
-
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        groupImageView.image = nil
+        groupNameLabel.text = nil
+    }
     
     func configure( image: UIImage?,name: String ) {
         groupImageView.image = image

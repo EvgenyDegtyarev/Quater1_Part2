@@ -13,8 +13,16 @@ class LoginFormControllerViewController: UIViewController {
  
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var passwordLabel: UILabel!
-    @IBOutlet weak var userNameTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var userNameTextField: UITextField! {
+        didSet {
+            userNameTextField.delegate = self
+            }
+        }
+    @IBOutlet weak var passwordTextField: UITextField! {
+        didSet {
+            passwordTextField.delegate = self
+            }
+        }
     
     @IBAction func loginButton(_ sender: Any) {
     }
@@ -106,6 +114,19 @@ class LoginFormControllerViewController: UIViewController {
     
 }
 
+extension LoginFormControllerViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case userNameTextField:
+            passwordTextField.becomeFirstResponder()
+        case passwordTextField:
+            passwordTextField.endEditing(false)
+        default: break
+        }
+        return true
+    }
+    
+}
 @IBDesignable class GradientView: UIView {
     
     @IBInspectable var startColor: UIColor = .white {

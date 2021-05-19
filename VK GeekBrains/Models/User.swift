@@ -11,5 +11,5 @@ struct User {
     let surname: String
     var fullname: String { "\(name) \(surname)" }
     let avatar: UIImage?
-//    let images: [UIImage]
+    let images: [UIImage?]
 }
