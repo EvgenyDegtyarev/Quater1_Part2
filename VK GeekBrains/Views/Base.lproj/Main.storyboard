@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iMp-yS-8fd">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -176,6 +176,40 @@
             </objects>
             <point key="canvasLocation" x="696" y="92"/>
         </scene>
+        <!--Login Controller-->
+        <scene sceneID="Isa-OT-HOE">
+            <objects>
+                <viewController id="iMp-yS-8fd" customClass="VKLoginController" customModule="VK_GeekBrains" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="na9-cq-vjH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="prc-vw-Juu">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="f6Z-1o-2MD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="f6Z-1o-2MD" firstAttribute="trailing" secondItem="prc-vw-Juu" secondAttribute="trailing" id="MwU-IS-txe"/>
+                            <constraint firstItem="f6Z-1o-2MD" firstAttribute="bottom" secondItem="prc-vw-Juu" secondAttribute="bottom" id="aR2-0l-B1Z"/>
+                            <constraint firstItem="prc-vw-Juu" firstAttribute="top" secondItem="f6Z-1o-2MD" secondAttribute="top" id="eAB-H5-ecv"/>
+                            <constraint firstItem="prc-vw-Juu" firstAttribute="leading" secondItem="f6Z-1o-2MD" secondAttribute="leading" id="fI1-j0-iaT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="prc-vw-Juu" id="I74-gg-Xzu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2K6-rY-FM5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="696" y="777"/>
+        </scene>
         <!--All Groups-->
         <scene sceneID="yZZ-Py-7yO">
             <objects>
@@ -202,7 +236,7 @@
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GroupCell" id="EOd-tD-E2T" customClass="GroupCell" customModule="VK_GeekBrains" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="263.5" width="414" height="58.5"/>
+                                <rect key="frame" x="0.0" y="267" width="414" height="58.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EOd-tD-E2T" id="eIC-0Q-5mz">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="58.5"/>
@@ -263,7 +297,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GroupCell" id="AzM-Ck-9Sq" customClass="GroupCell" customModule="VK_GeekBrains" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="24.5" width="414" height="58.5"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="58.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AzM-Ck-9Sq" id="113-ze-xza" customClass="GroupCell" customModule="VK_GeekBrains" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="58.5"/>
@@ -340,7 +374,7 @@
                             <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" reuseIdentifier="FriendsPhotoCell" translatesAutoresizingMaskIntoConstraints="NO" id="MLV-lv-bYb" customClass="FriendPhotoViewCell" customModule="VK_GeekBrains" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" layoutMarginsFollowReadableWidth="YES" reuseIdentifier="FriendsPhotoCell" translatesAutoresizingMaskIntoConstraints="NO" id="MLV-lv-bYb" customClass="FriendPhotoViewCell" customModule="VK_GeekBrains" customModuleProvider="target">
                                 <rect key="frame" x="107" y="5" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="zUc-Sg-4kB" customClass="AvatarBackShadow" customModule="VK_GeekBrains" customModuleProvider="target">
@@ -361,7 +395,7 @@
                                                 <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="11" scale="medium" weight="thin"/>
                                             </state>
-                                            <state key="selected" image="23685CFB-E586-4413-AFFB-E49497E9AB89"/>
+                                            <state key="selected" image="18B1321F-1022-4FBE-9465-79255C928F27"/>
                                             <connections>
                                                 <action selector="isLikedButton:" destination="MLV-lv-bYb" eventType="touchUpInside" id="6GG-lm-mK2"/>
                                             </connections>
@@ -490,7 +524,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="23685CFB-E586-4413-AFFB-E49497E9AB89" width="128" height="109">
+        <image name="18B1321F-1022-4FBE-9465-79255C928F27" width="128" height="109">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMSAAGGoF8QD05T
 S2V5ZWRBcmNoaXZlctEICVRyb290gAGvEBELDBscIRkmKywzNjlDS0xQU1UkbnVsbNcNDg8QERITFBUW

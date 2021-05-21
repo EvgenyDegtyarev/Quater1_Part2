@@ -8,6 +8,10 @@
 import Foundation
 
 class MySingleton {
-    var token: Int? 
-    var userId: String = ""
+    
+    static let instance = MySingleton()
+    private init() { }
+    
+    var userId: Int?
+    var token: String = ""
 }
