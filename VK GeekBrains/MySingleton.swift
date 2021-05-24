@@ -7,9 +7,9 @@
 
 import Foundation
 
-class MySingleton {
+class Session {
     
-    static let instance = MySingleton()
+    static let instance = Session()
     private init() { }
     
     var userId: Int?

@@ -8,34 +8,32 @@
 import UIKit
 import Alamofire
 
-
-//скопировано с вебинара, для проекта не используется
 final class NetworkService {
+    let baseUrl = "https://api.vk.com/"
+    let path = "method/"
+    var id: String = ""
+    var method: String = ""
     
-    private let host = "https://api.openweathermap.org"
-    
-    static let session: Session = {
-        let session = URLSessionConfiguration.default
-        session.timeoutIntervalForRequest = 60
-        let afSession = Session(configuration: session)
+    func makeRequest (_ method: String,_ parameters: Parameters){
+        let url = baseUrl + path + method
         
-        return afSession
-    }()
+        AF.request(url, method: .get, parameters: parameters).responseJSON {
+            response in print(response.value ?? "Something went wrong")
+        }
+    }
     
-
-    func fetchWeather(for city: String) {
-        let path = "/data/2.5/forecast"
-        let parametrs: Parameters = [
-            "q": city,
-            "units": "metric",
-            "appid": "f2bfc9ecbd40d4867ce6e7e6de10f5e0"
+    func getFriends(_ user_id: String,_ order: String,_ offset: String,_ fields: String){
+        
+        let parameters: Parameters = [
+            "access token" : Session.instance.token,
+            "v" : "5.130",
+            "user_id" : user_id,
+            "order" : order,
+            "offset" : offset,
+            "fields" : fields
         ]
         
-        AF.request(host + path,
-                   method: .get,
-                   parameters: parametrs)
-            .responseJSON { json in
-                print(json)
-            }
+        makeRequest("friends.get", parameters)
     }
+    
 }

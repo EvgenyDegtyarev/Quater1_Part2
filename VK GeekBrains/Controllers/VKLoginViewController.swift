@@ -63,9 +63,9 @@ extension VKLoginController: WKNavigationDelegate {
                 return
         }
         
-        let mySingleton = MySingleton.instance
-        mySingleton.token = token
-        mySingleton.userId = Int(userIdString)
+        let session = Session.instance
+        session.token = token
+        session.userId = Int(userIdString)
        
         
         
