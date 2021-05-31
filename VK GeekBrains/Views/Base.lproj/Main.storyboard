@@ -14,7 +14,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="UsersTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2Mw-CH-q02" customClass="UsersTableViewController" customModule="VK_GeekBrains" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="luk-BC-UE0">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Имя Фамилия" id="5zq-sQ-3Ip">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -33,7 +33,7 @@
                     <navigationItem key="navigationItem" title="Friends" id="ush-ig-jA5">
                         <barButtonItem key="leftBarButtonItem" image="arrowshape.turn.up.backward.fill" catalog="system" id="Tne-Lp-Nhb">
                             <connections>
-                                <segue destination="ekc-co-Ngh" kind="unwind" unwindAction="unwindSegueFor:" id="VpY-MY-CcP"/>
+                                <segue destination="ekc-co-Ngh" kind="unwind" unwindAction="logoutSegueFor:" id="v1Q-nU-y5c"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -109,7 +109,6 @@
                                         </state>
                                         <connections>
                                             <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dQF-nB-nB5"/>
-                                            <segue destination="zFt-gd-GH2" kind="presentation" identifier="goInside" modalPresentationStyle="fullScreen" id="PDg-qb-REs"/>
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vk_logo_main" translatesAutoresizingMaskIntoConstraints="NO" id="6Xd-oZ-T1w">
@@ -204,6 +203,7 @@
                     </view>
                     <connections>
                         <outlet property="webView" destination="prc-vw-Juu" id="I74-gg-Xzu"/>
+                        <segue destination="zFt-gd-GH2" kind="show" identifier="goToMain" id="2cm-xD-vf3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2K6-rY-FM5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -215,7 +215,7 @@
             <objects>
                 <tableViewController title="All Groups" id="lAZ-9R-wjK" customClass="AllGroupsTableViewController" customModule="VK_GeekBrains" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="xcw-BG-c0b">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="jov-Xy-F2q">
@@ -292,7 +292,7 @@
             <objects>
                 <tableViewController modalPresentationStyle="fullScreen" id="Z7n-nI-Yzj" customClass="GroupsTableViewController" customModule="VK_GeekBrains" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gMx-Im-PhR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -343,7 +343,7 @@
                     <navigationItem key="navigationItem" title="Groups" id="l63-gy-wFd">
                         <barButtonItem key="leftBarButtonItem" image="arrowshape.turn.up.backward.fill" catalog="system" id="Voc-CD-hKe">
                             <connections>
-                                <segue destination="sUG-Ej-4lY" kind="unwind" unwindAction="unwindSegueFor:" id="FdC-EC-fQr"/>
+                                <segue destination="sUG-Ej-4lY" kind="unwind" unwindAction="logoutSegueFor:" id="VMw-9U-MS6"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="CM6-Lq-TiG">
@@ -363,7 +363,7 @@
             <objects>
                 <collectionViewController storyboardIdentifier="FriendsPhotoCollectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kIT-uD-ASX" customClass="FriendsPhotoCollectionViewController" customModule="VK_GeekBrains" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="THk-oe-x6J">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <inset key="scrollIndicatorInsets" minX="10" minY="10" maxX="10" maxY="10"/>
@@ -374,7 +374,7 @@
                             <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" layoutMarginsFollowReadableWidth="YES" reuseIdentifier="FriendsPhotoCell" translatesAutoresizingMaskIntoConstraints="NO" id="MLV-lv-bYb" customClass="FriendPhotoViewCell" customModule="VK_GeekBrains" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" reuseIdentifier="FriendsPhotoCell" translatesAutoresizingMaskIntoConstraints="NO" id="MLV-lv-bYb" customClass="FriendPhotoViewCell" customModule="VK_GeekBrains" customModuleProvider="target">
                                 <rect key="frame" x="107" y="5" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="zUc-Sg-4kB" customClass="AvatarBackShadow" customModule="VK_GeekBrains" customModuleProvider="target">
@@ -395,7 +395,7 @@
                                                 <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="11" scale="medium" weight="thin"/>
                                             </state>
-                                            <state key="selected" image="18B1321F-1022-4FBE-9465-79255C928F27"/>
+                                            <state key="selected" image="A4BF0695-0C19-442E-BCE1-ECB704408E6D"/>
                                             <connections>
                                                 <action selector="isLikedButton:" destination="MLV-lv-bYb" eventType="touchUpInside" id="6GG-lm-mK2"/>
                                             </connections>
@@ -431,14 +431,14 @@
             <objects>
                 <viewController wantsFullScreenLayout="YES" id="i3v-92-e3k" customClass="FullPhotoController" customModule="VK_GeekBrains" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jSk-G8-pkt">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mP6-T0-Vtp">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="56" width="414" height="703"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JoU-DX-geM">
-                                <rect key="frame" x="414" y="88" width="0.0" height="725"/>
+                                <rect key="frame" x="414" y="56" width="0.0" height="703"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sPQ-B2-qA5"/>
@@ -471,7 +471,7 @@
                     <tabBarItem key="tabBarItem" title="Friends" image="person.2.fill" catalog="system" id="ZsZ-wY-oww"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="FbR-GU-rfh">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -490,7 +490,7 @@
                     <tabBarItem key="tabBarItem" title="Groups" image="person.3.fill" catalog="system" id="2CV-CP-T3K"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rTm-HT-6Yn">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -524,7 +524,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="18B1321F-1022-4FBE-9465-79255C928F27" width="128" height="109">
+        <image name="A4BF0695-0C19-442E-BCE1-ECB704408E6D" width="128" height="109">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMSAAGGoF8QD05T
 S2V5ZWRBcmNoaXZlctEICVRyb290gAGvEBELDBscIRkmKywzNjlDS0xQU1UkbnVsbNcNDg8QERITFBUW

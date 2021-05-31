@@ -6,14 +6,19 @@
 //
 
 import UIKit
-
+import Alamofire
 
 
 class FriendsPhotoCollectionViewController: UICollectionViewController {
+    
+    let networkService = NetworkService()
+    
     var userImages = [UIImage?]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+      
         
     }
 

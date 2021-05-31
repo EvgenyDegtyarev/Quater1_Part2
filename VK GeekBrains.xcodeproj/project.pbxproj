@@ -37,6 +37,9 @@
 		E4C684FF265550D800BA8361 /* MySingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C684FE265550D800BA8361 /* MySingleton.swift */; };
 		E4C6850326579C6F00BA8361 /* VKLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C6850226579C6F00BA8361 /* VKLoginViewController.swift */; };
 		E4C6850E26580DFE00BA8361 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C6850D26580DFE00BA8361 /* NetworkService.swift */; };
+		E4C685162665236300BA8361 /* JSONContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C685152665236200BA8361 /* JSONContainer.swift */; };
+		E4C68519266523C500BA8361 /* FileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C68518266523C500BA8361 /* FileResponse.swift */; };
+		E4C6851C2665243400BA8361 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C6851B2665243400BA8361 /* Response.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +76,9 @@
 		E4C684FE265550D800BA8361 /* MySingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySingleton.swift; sourceTree = "<group>"; };
 		E4C6850226579C6F00BA8361 /* VKLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKLoginViewController.swift; sourceTree = "<group>"; };
 		E4C6850D26580DFE00BA8361 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		E4C685152665236200BA8361 /* JSONContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONContainer.swift; sourceTree = "<group>"; };
+		E4C68518266523C500BA8361 /* FileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileResponse.swift; sourceTree = "<group>"; };
+		E4C6851B2665243400BA8361 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		F241C9D87A4FBE82B17489DE /* Pods_VK_GeekBrains.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VK_GeekBrains.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -148,6 +154,9 @@
 			children = (
 				E41E58652622E3E000AB9343 /* User.swift */,
 				E41E58682622E48800AB9343 /* Group.swift */,
+				E4C685152665236200BA8361 /* JSONContainer.swift */,
+				E4C68518266523C500BA8361 /* FileResponse.swift */,
+				E4C6851B2665243400BA8361 /* Response.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -344,6 +353,8 @@
 				E490576526306F8B00CB30F3 /* AvatarImageView.swift in Sources */,
 				E4C6850E26580DFE00BA8361 /* NetworkService.swift in Sources */,
 				E41E584326162E1F00AB9343 /* AppDelegate.swift in Sources */,
+				E4C68519266523C500BA8361 /* FileResponse.swift in Sources */,
+				E4C6851C2665243400BA8361 /* Response.swift in Sources */,
 				E490575C26306D6200CB30F3 /* FriendCell.swift in Sources */,
 				E4C684EE264D73B200BA8361 /* NavigationControllerAnimator.swift in Sources */,
 				E41E58752622E66F00AB9343 /* GroupCell.swift in Sources */,
@@ -355,6 +366,7 @@
 				E4C684F4264D76AA00BA8361 /* FullPhotoController.swift in Sources */,
 				E4C684FF265550D800BA8361 /* MySingleton.swift in Sources */,
 				E4C684EF264D73B200BA8361 /* Animator.swift in Sources */,
+				E4C685162665236300BA8361 /* JSONContainer.swift in Sources */,
 				E41E58662622E3E000AB9343 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

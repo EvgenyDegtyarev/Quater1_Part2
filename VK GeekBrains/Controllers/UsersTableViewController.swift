@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import Alamofire
 
 class UsersTableViewController: UITableViewController {
+    
+    let networkService = NetworkService()
     
     var friends = [User(name: "Евгений",
                         surname: "Дегтярев",
@@ -239,7 +242,7 @@ class UsersTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        networkService.getFriends(Session.instance.myID, "", "", "online")
         
         let nib = UINib(nibName: "FriendCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "FriendCell")

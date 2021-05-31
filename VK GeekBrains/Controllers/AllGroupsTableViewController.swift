@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import Alamofire
 
 class AllGroupsTableViewController: UITableViewController {
+    
+    let networkService = NetworkService()
     
     let groups = [
         Group(name: "Работа",
@@ -43,8 +46,8 @@ class AllGroupsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-    
+        networkService.getSearchedGroups("Reddit", "", "", "", "", "", "0", "", "4")
+        
     }
 
     // MARK: - Table view data source

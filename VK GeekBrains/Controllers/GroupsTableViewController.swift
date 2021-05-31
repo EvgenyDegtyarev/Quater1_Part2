@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import Alamofire
 
 class GroupsTableViewController: UITableViewController {
+    
+    let networkService = NetworkService()
     
     var groups = [Group]()
     
@@ -27,7 +30,7 @@ class GroupsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        networkService.getGroups(Session.instance.myID, "1", "", "", "", "50")
     }
 
     // MARK: - Table view data source
