@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Alamofire
+
 
 class AllGroupsTableViewController: UITableViewController {
     
@@ -43,7 +43,7 @@ class AllGroupsTableViewController: UITableViewController {
               avatar: UIImage(named: "naImage.png")),
     ]
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         networkService.getSearchedGroups("Reddit", "", "", "", "", "", "0", "", "4")

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct JSONContainer: Codable {
-    let count: Int
-    let vkFriends: [VKFriends]
-}
+//struct JSONContainer: Codable {
+  //  let count: Int
+   // let vkFriends: [VKFriends]
+//}

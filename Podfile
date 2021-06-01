@@ -6,5 +6,5 @@ target 'VK GeekBrains' do
   use_frameworks!
   pod 'Alamofire'
   # Pods for VK GeekBrains
-
+  pod 'SwiftyJSON'
 end

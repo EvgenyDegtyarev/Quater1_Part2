@@ -6,11 +6,16 @@
 //
 
 import UIKit
-import Alamofire
+
+
+
 
 class UsersTableViewController: UITableViewController {
     
     let networkService = NetworkService()
+    var friendsData = [VKUser] ()
+    var nextData = 0
+    
     
     var friends = [User(name: "Евгений",
                         surname: "Дегтярев",
@@ -242,7 +247,12 @@ class UsersTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        networkService.getFriends(Session.instance.myID, "", "", "online")
+        networkService.getFriends(Session.instance.myID, "", "1", "first_name,last_name,photo_200_orig,id,last_seen") { [weak self] response in
+            // 🚩Here
+            self?.friendsData = response
+            self?.tableView.reloadData()
+        }
+        //networkService.getFriends(Session.instance.myID, "", "", "online")
         
         let nib = UINib(nibName: "FriendCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "FriendCell")

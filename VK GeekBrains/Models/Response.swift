@@ -5,7 +5,7 @@
 //  Created by Евгений Дегтярев on 31.05.2021.
 //
 
-import Foundation
+/*import Foundation
 
 struct Response: Codable {
     
@@ -34,4 +34,4 @@ extension Response {
 
     }
 }
-
+*/
