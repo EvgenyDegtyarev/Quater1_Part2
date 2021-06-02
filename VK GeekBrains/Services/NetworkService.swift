@@ -83,7 +83,7 @@ final class NetworkService {
             }
         }
     }
-    func getGroups(_ user_id: String,_ extended: String,_ filter: String,_ fields: String,_ offset: String,_ count: String) {
+    func getGroups(_ user_id: String,_ extended: String,_ filter: String,_ fields: String,_ offset: String,_ count: String, completion: @escaping([VKGroups]) -> Void) {
         
         let parameters: Parameters = [
             "access_token" : Session.instance.token,
@@ -95,7 +95,17 @@ final class NetworkService {
             "offset" : offset,
             "count" : count
         ]
+        let url = baseUrl+path+"groups.get"
         
+        AF.request(url, method: .get, parameters: parameters).responseDecodable(of: VKResponse<VKItems<VKGroups>>.self) { response in
+            switch response.result {
+            case .success(let vkResponse):
+                completion(vkResponse.response.items)
+            case .failure(_):
+                print("error")
+            }
+            
+        }
         //  makeRequest("groups.get", parameters)
         
     }

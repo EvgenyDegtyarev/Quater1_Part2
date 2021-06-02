@@ -13,6 +13,7 @@ class GroupsTableViewController: UITableViewController {
     let networkService = NetworkService()
     
     var groups = [Group]()
+    var groupsData = [VKGroups]()
     
     @IBAction func addGroup(segue: UIStoryboardSegue) {
         guard

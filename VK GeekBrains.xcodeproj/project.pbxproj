@@ -23,6 +23,9 @@
 		E41E587F2623009200AB9343 /* AllGroupsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41E587E2623009200AB9343 /* AllGroupsTableViewController.swift */; };
 		E41E588E26234DE000AB9343 /* FriendPhotoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41E588D26234DE000AB9343 /* FriendPhotoViewCell.swift */; };
 		E41E589126234DFF00AB9343 /* FriendsPhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41E589026234DFF00AB9343 /* FriendsPhotoCollectionViewController.swift */; };
+		E483CCF326680085003F23FD /* VKGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = E483CCF226680085003F23FD /* VKGroups.swift */; };
+		E483CCF72668061A003F23FD /* VKPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E483CCF62668061A003F23FD /* VKPhoto.swift */; };
+		E483CD0526680B8E003F23FD /* RealmUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E483CD0426680B8E003F23FD /* RealmUser.swift */; };
 		E490575C26306D6200CB30F3 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E490575A26306D6200CB30F3 /* FriendCell.swift */; };
 		E490575D26306D6200CB30F3 /* FriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E490575B26306D6200CB30F3 /* FriendCell.xib */; };
 		E490576526306F8B00CB30F3 /* AvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E490576426306F8B00CB30F3 /* AvatarImageView.swift */; };
@@ -66,6 +69,9 @@
 		E41E587E2623009200AB9343 /* AllGroupsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupsTableViewController.swift; sourceTree = "<group>"; };
 		E41E588D26234DE000AB9343 /* FriendPhotoViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendPhotoViewCell.swift; sourceTree = "<group>"; };
 		E41E589026234DFF00AB9343 /* FriendsPhotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsPhotoCollectionViewController.swift; sourceTree = "<group>"; };
+		E483CCF226680085003F23FD /* VKGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKGroups.swift; sourceTree = "<group>"; };
+		E483CCF62668061A003F23FD /* VKPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKPhoto.swift; sourceTree = "<group>"; };
+		E483CD0426680B8E003F23FD /* RealmUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmUser.swift; sourceTree = "<group>"; };
 		E490575A26306D6200CB30F3 /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
 		E490575B26306D6200CB30F3 /* FriendCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendCell.xib; sourceTree = "<group>"; };
 		E490576426306F8B00CB30F3 /* AvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarImageView.swift; sourceTree = "<group>"; };
@@ -160,6 +166,7 @@
 		E41E58642622E3C100AB9343 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E483CD0326680B77003F23FD /* RealmModels */,
 				E4C6851E26655E4600BA8361 /* VKModels */,
 				E41E58652622E3E000AB9343 /* User.swift */,
 				E41E58682622E48800AB9343 /* Group.swift */,
@@ -207,6 +214,14 @@
 			path = Reusable;
 			sourceTree = "<group>";
 		};
+		E483CD0326680B77003F23FD /* RealmModels */ = {
+			isa = PBXGroup;
+			children = (
+				E483CD0426680B8E003F23FD /* RealmUser.swift */,
+			);
+			path = RealmModels;
+			sourceTree = "<group>";
+		};
 		E490576326306F7000CB30F3 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,6 +256,8 @@
 				E4C6851F26655E6800BA8361 /* VKResponse.swift */,
 				E4C6852226655EB700BA8361 /* VKItems.swift */,
 				E4C6852526655F8800BA8361 /* VKUser.swift */,
+				E483CCF226680085003F23FD /* VKGroups.swift */,
+				E483CCF62668061A003F23FD /* VKPhoto.swift */,
 			);
 			path = VKModels;
 			sourceTree = "<group>";
@@ -361,6 +378,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E483CD0526680B8E003F23FD /* RealmUser.swift in Sources */,
 				E4C684DD264AC9D400BA8361 /* CustomSegue.swift in Sources */,
 				E41E585926175AE500AB9343 /* LoginFormControllerViewController.swift in Sources */,
 				E4C6850326579C6F00BA8361 /* VKLoginViewController.swift in Sources */,
@@ -369,8 +387,10 @@
 				E41E58792622EE6100AB9343 /* UsersTableViewController.swift in Sources */,
 				E41E587F2623009200AB9343 /* AllGroupsTableViewController.swift in Sources */,
 				E4C684ED264D73B200BA8361 /* CustomTransition.swift in Sources */,
+				E483CCF72668061A003F23FD /* VKPhoto.swift in Sources */,
 				E4C685332666730000BA8361 /* File.swift in Sources */,
 				E41E588E26234DE000AB9343 /* FriendPhotoViewCell.swift in Sources */,
+				E483CCF326680085003F23FD /* VKGroups.swift in Sources */,
 				E490576526306F8B00CB30F3 /* AvatarImageView.swift in Sources */,
 				E4C6850E26580DFE00BA8361 /* NetworkService.swift in Sources */,
 				E4C6852626655F8800BA8361 /* VKUser.swift in Sources */,
