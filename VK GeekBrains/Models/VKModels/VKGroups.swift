@@ -7,22 +7,18 @@
 
 import SwiftyJSON
 
-struct VKGroups: Codable {
-    let groupID: Int
-    let groupName: String
-    let groupAvatar: String
+struct VKGroup {
+    let id: Int
+    let name: String
+    let avatarURL: String
+    let isMember: Bool
 }
 
-extension VKGroups {
+extension VKGroup {
     init(_ json: JSON) {
-        let groupID = json["id"].intValue
-        let groupName = json["name"].stringValue
-        let groupAvatar = json["photo_200"].stringValue
-        
-        self.init(
-            groupID: groupID,
-            groupName: groupName,
-            groupAvatar: groupAvatar
-        )
+        self.id = json["id"].intValue
+        self.name = json["name"].stringValue
+        self.avatarURL = json["photo_200"].stringValue
+        self.isMember = json["is_member"].boolValue
     }
 }

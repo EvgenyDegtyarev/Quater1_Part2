@@ -6,14 +6,14 @@
 //
 
 import UIKit
-
+import RealmSwift
 
 
 
 class UsersTableViewController: UITableViewController {
     
     let networkService = NetworkService()
-    var friendsData = [VKUser] ()
+   var friendsData = [VKUser] ()
     var nextData = 0
     
     
@@ -247,12 +247,18 @@ class UsersTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        networkService.getFriends(Session.instance.myID, "", "1", "first_name,last_name,photo_200_orig,id,last_seen") { [weak self] response in
+    /*  networkService.getFriends(Session.instance.myID, "", "1", "first_name,last_name,photo_200_orig,id,last_seen") { [weak self] response in
             // 🚩Here
             self?.friendsData = response
             self?.tableView.reloadData()
+        } */
+        networkService.getUserFriends { [weak self] vkFriends in
+            guard
+                let self = self,
+                let friends = vkFriends
+            else { return }
+            try? RealmService.save(items: friends)
         }
-        //networkService.getFriends(Session.instance.myID, "", "", "online")
         
         let nib = UINib(nibName: "FriendCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "FriendCell")
@@ -353,4 +359,6 @@ extension UsersTableViewController: UISearchBarDelegate {
         }
         
     }
+ 
+   
 }

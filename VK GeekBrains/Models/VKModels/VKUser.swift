@@ -6,12 +6,14 @@
 //
 
 import SwiftyJSON
-// 🚩Here
-struct VKUser: Codable {
+
+struct VKUser {
     let id: Int
     let firstName: String
     let lastName: String
     let avatarURL: String
+    
+    var fullName: String { "\(firstName) + \(lastName)" }
 }
 
 extension VKUser {

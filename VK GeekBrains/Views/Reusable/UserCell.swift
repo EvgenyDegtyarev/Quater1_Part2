@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class UserCell: UITableViewCell {
 
@@ -18,8 +19,10 @@ class UserCell: UITableViewCell {
         userNameLabel.text = nil
     }
     
-    func configure(image: UIImage?, name: String) {
-        userAvatarImage.image = image
+    func configure(
+        imageURL: String,
+        name: String) {
+        userAvatarImage.kf.setImage(with: URL(string: imageURL))
         userNameLabel.text = name
     }
     override func awakeFromNib() {

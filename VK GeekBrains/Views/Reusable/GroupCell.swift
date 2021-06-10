@@ -18,8 +18,10 @@ class GroupCell: UITableViewCell {
         groupNameLabel.text = nil
     }
     
-    func configure( image: UIImage?,name: String ) {
-        groupImageView.image = image
+    func configure(
+        imageURL: String,
+        name: String) {
+        groupImageView.kf.setImage(with: URL(string: imageURL))
         groupNameLabel.text = name
     }
    

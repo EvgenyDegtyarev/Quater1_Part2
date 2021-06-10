@@ -12,9 +12,3 @@ struct VKItems <T:Codable>: Codable {
     let items: [T]
 }
 
-extension VKItems {
-    enum CodingKeys: String, CodingKey {
-        case count
-        case items
-    }
-}

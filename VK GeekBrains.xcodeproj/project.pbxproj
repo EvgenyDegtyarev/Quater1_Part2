@@ -26,6 +26,11 @@
 		E483CCF326680085003F23FD /* VKGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = E483CCF226680085003F23FD /* VKGroups.swift */; };
 		E483CCF72668061A003F23FD /* VKPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E483CCF62668061A003F23FD /* VKPhoto.swift */; };
 		E483CD0526680B8E003F23FD /* RealmUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E483CD0426680B8E003F23FD /* RealmUser.swift */; };
+		E483CD0F26690982003F23FD /* RealmFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = E483CD0E26690982003F23FD /* RealmFriends.swift */; };
+		E483CD1226690B37003F23FD /* RealmGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = E483CD1126690B37003F23FD /* RealmGroups.swift */; };
+		E483CD1526690C8F003F23FD /* PhotoRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E483CD1426690C8F003F23FD /* PhotoRealm.swift */; };
+		E483CD1926728329003F23FD /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E483CD1826728329003F23FD /* RealmService.swift */; };
+		E483CD1C267284A6003F23FD /* VKPhotoSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E483CD1B267284A6003F23FD /* VKPhotoSizes.swift */; };
 		E490575C26306D6200CB30F3 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E490575A26306D6200CB30F3 /* FriendCell.swift */; };
 		E490575D26306D6200CB30F3 /* FriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E490575B26306D6200CB30F3 /* FriendCell.xib */; };
 		E490576526306F8B00CB30F3 /* AvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E490576426306F8B00CB30F3 /* AvatarImageView.swift */; };
@@ -46,7 +51,6 @@
 		E4C6852326655EB700BA8361 /* VKItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C6852226655EB700BA8361 /* VKItems.swift */; };
 		E4C6852626655F8800BA8361 /* VKUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C6852526655F8800BA8361 /* VKUser.swift */; };
 		E4C685332666730000BA8361 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C685322666730000BA8361 /* File.swift */; };
-		E4C685472666CFC000BA8361 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4C685452666CFC000BA8361 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +76,11 @@
 		E483CCF226680085003F23FD /* VKGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKGroups.swift; sourceTree = "<group>"; };
 		E483CCF62668061A003F23FD /* VKPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKPhoto.swift; sourceTree = "<group>"; };
 		E483CD0426680B8E003F23FD /* RealmUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmUser.swift; sourceTree = "<group>"; };
+		E483CD0E26690982003F23FD /* RealmFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmFriends.swift; sourceTree = "<group>"; };
+		E483CD1126690B37003F23FD /* RealmGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmGroups.swift; sourceTree = "<group>"; };
+		E483CD1426690C8F003F23FD /* PhotoRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoRealm.swift; sourceTree = "<group>"; };
+		E483CD1826728329003F23FD /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		E483CD1B267284A6003F23FD /* VKPhotoSizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKPhotoSizes.swift; sourceTree = "<group>"; };
 		E490575A26306D6200CB30F3 /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
 		E490575B26306D6200CB30F3 /* FriendCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendCell.xib; sourceTree = "<group>"; };
 		E490576426306F8B00CB30F3 /* AvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarImageView.swift; sourceTree = "<group>"; };
@@ -92,7 +101,6 @@
 		E4C6852226655EB700BA8361 /* VKItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKItems.swift; sourceTree = "<group>"; };
 		E4C6852526655F8800BA8361 /* VKUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKUser.swift; sourceTree = "<group>"; };
 		E4C685322666730000BA8361 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
-		E4C685462666CFC000BA8361 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F241C9D87A4FBE82B17489DE /* Pods_VK_GeekBrains.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VK_GeekBrains.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -204,7 +212,6 @@
 		E41E586F2622E61B00AB9343 /* Reusable */ = {
 			isa = PBXGroup;
 			children = (
-				E4C685452666CFC000BA8361 /* Main.storyboard */,
 				E41E58702622E65400AB9343 /* UserCell.swift */,
 				E41E58742622E66E00AB9343 /* GroupCell.swift */,
 				E41E588D26234DE000AB9343 /* FriendPhotoViewCell.swift */,
@@ -218,6 +225,9 @@
 			isa = PBXGroup;
 			children = (
 				E483CD0426680B8E003F23FD /* RealmUser.swift */,
+				E483CD0E26690982003F23FD /* RealmFriends.swift */,
+				E483CD1126690B37003F23FD /* RealmGroups.swift */,
+				E483CD1426690C8F003F23FD /* PhotoRealm.swift */,
 			);
 			path = RealmModels;
 			sourceTree = "<group>";
@@ -246,6 +256,7 @@
 			children = (
 				E4C6850D26580DFE00BA8361 /* NetworkService.swift */,
 				E4C685322666730000BA8361 /* File.swift */,
+				E483CD1826728329003F23FD /* RealmService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -258,6 +269,7 @@
 				E4C6852526655F8800BA8361 /* VKUser.swift */,
 				E483CCF226680085003F23FD /* VKGroups.swift */,
 				E483CCF62668061A003F23FD /* VKPhoto.swift */,
+				E483CD1B267284A6003F23FD /* VKPhotoSizes.swift */,
 			);
 			path = VKModels;
 			sourceTree = "<group>";
@@ -324,7 +336,6 @@
 				E41E584F26162E2200AB9343 /* LaunchScreen.storyboard in Resources */,
 				E490576A2630A99100CB30F3 /* View.xib in Resources */,
 				E41E584C26162E2200AB9343 /* Assets.xcassets in Resources */,
-				E4C685472666CFC000BA8361 /* Main.storyboard in Resources */,
 				E490575D26306D6200CB30F3 /* FriendCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,10 +398,12 @@
 				E41E58792622EE6100AB9343 /* UsersTableViewController.swift in Sources */,
 				E41E587F2623009200AB9343 /* AllGroupsTableViewController.swift in Sources */,
 				E4C684ED264D73B200BA8361 /* CustomTransition.swift in Sources */,
+				E483CD1226690B37003F23FD /* RealmGroups.swift in Sources */,
 				E483CCF72668061A003F23FD /* VKPhoto.swift in Sources */,
 				E4C685332666730000BA8361 /* File.swift in Sources */,
 				E41E588E26234DE000AB9343 /* FriendPhotoViewCell.swift in Sources */,
 				E483CCF326680085003F23FD /* VKGroups.swift in Sources */,
+				E483CD0F26690982003F23FD /* RealmFriends.swift in Sources */,
 				E490576526306F8B00CB30F3 /* AvatarImageView.swift in Sources */,
 				E4C6850E26580DFE00BA8361 /* NetworkService.swift in Sources */,
 				E4C6852626655F8800BA8361 /* VKUser.swift in Sources */,
@@ -400,6 +413,7 @@
 				E490575C26306D6200CB30F3 /* FriendCell.swift in Sources */,
 				E4C6852026655E6800BA8361 /* VKResponse.swift in Sources */,
 				E4C684EE264D73B200BA8361 /* NavigationControllerAnimator.swift in Sources */,
+				E483CD1C267284A6003F23FD /* VKPhotoSizes.swift in Sources */,
 				E41E58752622E66F00AB9343 /* GroupCell.swift in Sources */,
 				E41E589126234DFF00AB9343 /* FriendsPhotoCollectionViewController.swift in Sources */,
 				E41E58712622E65400AB9343 /* UserCell.swift in Sources */,
@@ -407,7 +421,9 @@
 				E4C6852326655EB700BA8361 /* VKItems.swift in Sources */,
 				E41E584526162E1F00AB9343 /* SceneDelegate.swift in Sources */,
 				E4C684EC264D73B200BA8361 /* CustomNavigationController.swift in Sources */,
+				E483CD1526690C8F003F23FD /* PhotoRealm.swift in Sources */,
 				E4C684F4264D76AA00BA8361 /* FullPhotoController.swift in Sources */,
+				E483CD1926728329003F23FD /* RealmService.swift in Sources */,
 				E4C684FF265550D800BA8361 /* MySingleton.swift in Sources */,
 				E4C684EF264D73B200BA8361 /* Animator.swift in Sources */,
 				E4C685162665236300BA8361 /* JSONContainer.swift in Sources */,
@@ -424,14 +440,6 @@
 				E41E584E26162E2200AB9343 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		E4C685452666CFC000BA8361 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E4C685462666CFC000BA8361 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

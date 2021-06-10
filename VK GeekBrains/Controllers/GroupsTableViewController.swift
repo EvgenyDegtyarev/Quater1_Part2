@@ -11,12 +11,14 @@ import UIKit
 class GroupsTableViewController: UITableViewController {
     
     let networkService = NetworkService()
-    
-    var groups = [Group]()
-    var groupsData = [VKGroups]()
+    var groups = [VKGroup]() {
+        didSet {
+            self.tableView.reloadData()
+        }
+    }
     
     @IBAction func addGroup(segue: UIStoryboardSegue) {
-        guard
+   /*     guard
             segue.identifier == "addGroup",
         let allGroupsController = segue.source as? AllGroupsTableViewController,
             let indexPath = allGroupsController.tableView.indexPathForSelectedRow
@@ -26,12 +28,19 @@ class GroupsTableViewController: UITableViewController {
             groups.append(group)
             tableView.reloadData()
         }
+ */
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        networkService.getGroups(Session.instance.myID, "1", "", "", "", "50")
+        networkService.getUserGroups { [weak self] vkGroups in
+            guard
+                let self = self,
+                let groups = vkGroups
+            else {return}
+            self.groups = groups
+        }
+      
     }
 
     // MARK: - Table view data source
@@ -45,7 +54,7 @@ class GroupsTableViewController: UITableViewController {
         }
         
         let currentGroup = groups[indexPath.row]
-        cell.configure(image: currentGroup.avatar, name: currentGroup.name)
+        cell.configure(imageURL: currentGroup.avatarURL, name: currentGroup.name)
         return cell
     }
     
