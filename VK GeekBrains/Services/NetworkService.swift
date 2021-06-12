@@ -34,119 +34,87 @@ final class NetworkService {
         return urlComponent
     }
     
+    func getUserPhotos(
+        userID: Int,
+        completion: @escaping ([VKPhoto]?) -> Void) {
+        var urlComponets = makeComponents(for: .getAllPhotos)
+        urlComponets.queryItems?.append(contentsOf: [
+            URLQueryItem(name: "owner_id", value: "\(userID)"),
+            URLQueryItem(name: "album_id", value: "profile"),
+            URLQueryItem(name: "extended", value: "1"),
+            URLQueryItem(name: "photo_sizes", value: "1"),
+        ])
+        
+        if let url = urlComponets.url {
+            AF
+                .request(url)
+                .responseData { response in
+                    switch response.result {
+                    case .success(let data):
+                        let json = JSON(data)
+                        let photoJSONs = json["response"]["items"].arrayValue
+                        let vkUserPhoto = photoJSONs.map { VKPhoto($0) }
+                        completion(vkUserPhoto)
+                    case .failure(let error):
+                        print(error)
+                        completion(nil)
+                    }
+                }
+        }
+    }
     
-    func getUserFriends() {
+    
+    func getUserFriends(completion: @escaping ([RealmUser]?) -> Void) {
         var urlComponents = makeComponents(for: .getFriends)
         urlComponents.queryItems?.append(contentsOf: [
-        URLQueryItem(name: "fields", value: "photo_200")
+            URLQueryItem(name: "fields", value: "photo_200"),
         ])
         
         if let url = urlComponents.url {
-            AF.request(url).responseData { response in
-                switch response.result {
-                case.success(let data):
-                    let json = JSON(data)
-                    let usersJSON = json["response"]["items"].arrayValue
-                    usersJSON.map {VKUser($0)}
-                    let vkUsers = usersJSON.map {VKUser($0)}
-                    
-                case .failure(let afError):
-                    break
+            AF
+                .request(url)
+                .responseData { response in
+                    switch response.result {
+                    case .success(let data):
+                        let json = JSON(data)
+                        let usersJSONs = json["response"]["items"].arrayValue
+                        let vkUsers = usersJSONs.map { RealmUser($0) }
+                        DispatchQueue.main.async {
+                            completion(vkUsers)
+                        }
+                    case .failure(let error):
+                        print(error)
+                        completion(nil)
+                    }
                 }
-                
-            }
         }
     }
     
-    func getFriends(_ user_id: String,_ order: String,_ offset: String,_ fields: String, completion: @escaping([VKUser]) -> Void) {
+   
+    func getUserGroups(completion: @escaping ([VKGroup]?) -> Void) {
+        var urlComponents = makeComponents(for: .getGroups)
+        urlComponents.queryItems?.append(contentsOf: [
+            URLQueryItem(name: "extended", value: "1"),
+        ])
         
-        let parameters: Parameters = [
-            "access token" : Session.instance.token,
-            "v" : "5.130",
-            "user_id" : user_id,
-            "order" : order,
-            "offset" : offset,
-            "fields" : fields
-        ]
-        
-        let url = baseUrl+path+"friends.get"
-        
-        AF.request(url, method: .get, parameters: parameters).responseDecodable(of: VKResponse<VKItems<VKUser>>.self) { response in
-            switch response.result {
-            case .success(let vkResponse):
-                
-                // 🚩Here
-                completion(vkResponse.response.items)
-                
-            case .failure(_):
-                print("error")
-            }
+        if let url = urlComponents.url {
+            AF
+                .request(url)
+                .responseData { response in
+                    switch response.result {
+                    case .success(let data):
+                        let json = JSON(data)
+                        let usersJSONs = json["response"]["items"].arrayValue
+                        let vkUsers = usersJSONs.map { VKGroup($0) }
+                        completion(vkUsers)
+                    case .failure(let error):
+                        print(error)
+                        completion(nil)
+                    }
+                }
         }
     }
-    func getGroups(_ user_id: String,_ extended: String,_ filter: String,_ fields: String,_ offset: String,_ count: String, completion: @escaping([VKGroups]) -> Void) {
-        
-        let parameters: Parameters = [
-            "access_token" : Session.instance.token,
-            "v" : "5.130",
-            "user_id" : user_id,
-            "extended" : extended,
-            "filter" : filter,
-            "fields" : fields,
-            "offset" : offset,
-            "count" : count
-        ]
-        let url = baseUrl+path+"groups.get"
-        
-        AF.request(url, method: .get, parameters: parameters).responseDecodable(of: VKResponse<VKItems<VKGroups>>.self) { response in
-            switch response.result {
-            case .success(let vkResponse):
-                completion(vkResponse.response.items)
-            case .failure(_):
-                print("error")
-            }
-            
-        }
-        //  makeRequest("groups.get", parameters)
-        
-    }
     
-    func getSearchedGroups(_ searchText: String,_ type: String,_ country_id: String,_ city_id: String,_ future: String,_ market: String,_ sort: String,_ offset: String,_ count: String ) {
-        
-        let parameters: Parameters = [
-            "access_token" : Session.instance.token,
-            "v" : "5.130",
-            "q" : searchText,
-            "type" : type,
-            "country_id" : country_id,
-            "city_id" : city_id,
-            "future" : future,
-            "market" : market,
-            "sort" : sort,
-            "offset" : offset,
-            "count" : count
-        ]
-        
-//         makeRequest("groups.search", parameters)
-    }
-    
-    func getUserPhotos(_ owner_id: String,_ album_id: String,_ photo_ids: String,_ rev: String,_ extended: String,_ feed_type: String,_ feed: String,_ photo_sizes: String,_ offset: String,_ count: String) {
-        
-        let parameters: Parameters = [
-            "access_token" : Session.instance.token,
-            "v" : "5.130",
-            "owner_id" : owner_id,
-            "album_id" : album_id,
-            "photo_ids" : photo_ids,
-            "rev" : rev,
-            "extended" : extended,
-            "feed_type" : feed_type,
-            "feed" : feed,
-            "photo_sizes" : photo_sizes,
-            "offset" : offset,
-            "count" : count
-        ]
-        
-        //  makeRequest("photos.get", parameters)
-    }
+
 }
 

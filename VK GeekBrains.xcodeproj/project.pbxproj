@@ -31,6 +31,7 @@
 		E483CD1526690C8F003F23FD /* PhotoRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E483CD1426690C8F003F23FD /* PhotoRealm.swift */; };
 		E483CD1926728329003F23FD /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E483CD1826728329003F23FD /* RealmService.swift */; };
 		E483CD1C267284A6003F23FD /* VKPhotoSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E483CD1B267284A6003F23FD /* VKPhotoSizes.swift */; };
+		E483CD3526749535003F23FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E483CD3326749535003F23FD /* Main.storyboard */; };
 		E490575C26306D6200CB30F3 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E490575A26306D6200CB30F3 /* FriendCell.swift */; };
 		E490575D26306D6200CB30F3 /* FriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E490575B26306D6200CB30F3 /* FriendCell.xib */; };
 		E490576526306F8B00CB30F3 /* AvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E490576426306F8B00CB30F3 /* AvatarImageView.swift */; };
@@ -81,6 +82,7 @@
 		E483CD1426690C8F003F23FD /* PhotoRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoRealm.swift; sourceTree = "<group>"; };
 		E483CD1826728329003F23FD /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		E483CD1B267284A6003F23FD /* VKPhotoSizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKPhotoSizes.swift; sourceTree = "<group>"; };
+		E483CD3426749535003F23FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "VK GeekBrains/Base.lproj/Main.storyboard"; sourceTree = SOURCE_ROOT; };
 		E490575A26306D6200CB30F3 /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
 		E490575B26306D6200CB30F3 /* FriendCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendCell.xib; sourceTree = "<group>"; };
 		E490576426306F8B00CB30F3 /* AvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarImageView.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				E490576326306F7000CB30F3 /* CustomView */,
 				E41E586F2622E61B00AB9343 /* Reusable */,
 				E49057692630A99100CB30F3 /* View.xib */,
+				E483CD3326749535003F23FD /* Main.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E41E584F26162E2200AB9343 /* LaunchScreen.storyboard in Resources */,
+				E483CD3526749535003F23FD /* Main.storyboard in Resources */,
 				E490576A2630A99100CB30F3 /* View.xib in Resources */,
 				E41E584C26162E2200AB9343 /* Assets.xcassets in Resources */,
 				E490575D26306D6200CB30F3 /* FriendCell.xib in Resources */,
@@ -440,6 +444,14 @@
 				E41E584E26162E2200AB9343 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		E483CD3326749535003F23FD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E483CD3426749535003F23FD /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
