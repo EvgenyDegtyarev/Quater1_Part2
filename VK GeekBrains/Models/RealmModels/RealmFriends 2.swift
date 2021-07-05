@@ -6,9 +6,9 @@
 //
 
 import Foundation
-//import RealmSwift
+import RealmSwift
 
-class FriendsRealm: Codable {
+class FriendsRealm: Object, Codable {
     @objc dynamic var id: Int = 0
     @objc dynamic var firstName: String = ""
     @objc dynamic var lastName: String = ""

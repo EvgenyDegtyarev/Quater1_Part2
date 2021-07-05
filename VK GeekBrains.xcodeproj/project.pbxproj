@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		00E5A31496CCA3C6BBE98426 /* Pods_VK_GeekBrains.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F241C9D87A4FBE82B17489DE /* Pods_VK_GeekBrains.framework */; };
+		B4135AD12684FE7300C744C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4135AD02684FE7300C744C0 /* Main.storyboard */; };
 		E41E584326162E1F00AB9343 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41E584226162E1F00AB9343 /* AppDelegate.swift */; };
 		E41E584526162E1F00AB9343 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41E584426162E1F00AB9343 /* SceneDelegate.swift */; };
 		E41E584C26162E2200AB9343 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E41E584B26162E2200AB9343 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 		E41E587F2623009200AB9343 /* AllGroupsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41E587E2623009200AB9343 /* AllGroupsTableViewController.swift */; };
 		E41E588E26234DE000AB9343 /* FriendPhotoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41E588D26234DE000AB9343 /* FriendPhotoViewCell.swift */; };
 		E41E589126234DFF00AB9343 /* FriendsPhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41E589026234DFF00AB9343 /* FriendsPhotoCollectionViewController.swift */; };
+		E48257E0269360BC00849164 /* NewsFeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48257DF269360BB00849164 /* NewsFeedTableViewController.swift */; };
 		E483CCF326680085003F23FD /* VKGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = E483CCF226680085003F23FD /* VKGroups.swift */; };
 		E483CCF72668061A003F23FD /* VKPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E483CCF62668061A003F23FD /* VKPhoto.swift */; };
 		E483CD0526680B8E003F23FD /* RealmUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E483CD0426680B8E003F23FD /* RealmUser.swift */; };
@@ -31,7 +33,6 @@
 		E483CD1526690C8F003F23FD /* PhotoRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E483CD1426690C8F003F23FD /* PhotoRealm.swift */; };
 		E483CD1926728329003F23FD /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E483CD1826728329003F23FD /* RealmService.swift */; };
 		E483CD1C267284A6003F23FD /* VKPhotoSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E483CD1B267284A6003F23FD /* VKPhotoSizes.swift */; };
-		E483CD3526749535003F23FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E483CD3326749535003F23FD /* Main.storyboard */; };
 		E490575C26306D6200CB30F3 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E490575A26306D6200CB30F3 /* FriendCell.swift */; };
 		E490575D26306D6200CB30F3 /* FriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E490575B26306D6200CB30F3 /* FriendCell.xib */; };
 		E490576526306F8B00CB30F3 /* AvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E490576426306F8B00CB30F3 /* AvatarImageView.swift */; };
@@ -57,6 +58,7 @@
 /* Begin PBXFileReference section */
 		0D0F0575999CB2DFF01E5091 /* Pods-VK GeekBrains.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VK GeekBrains.debug.xcconfig"; path = "Target Support Files/Pods-VK GeekBrains/Pods-VK GeekBrains.debug.xcconfig"; sourceTree = "<group>"; };
 		0E3B8B5779087C2D531E7C3E /* Pods-VK GeekBrains.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VK GeekBrains.release.xcconfig"; path = "Target Support Files/Pods-VK GeekBrains/Pods-VK GeekBrains.release.xcconfig"; sourceTree = "<group>"; };
+		B4135AD02684FE7300C744C0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		E41E583F26162E1F00AB9343 /* VK GeekBrains.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VK GeekBrains.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E41E584226162E1F00AB9343 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E41E584426162E1F00AB9343 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 		E41E587E2623009200AB9343 /* AllGroupsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupsTableViewController.swift; sourceTree = "<group>"; };
 		E41E588D26234DE000AB9343 /* FriendPhotoViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendPhotoViewCell.swift; sourceTree = "<group>"; };
 		E41E589026234DFF00AB9343 /* FriendsPhotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsPhotoCollectionViewController.swift; sourceTree = "<group>"; };
+		E48257DF269360BB00849164 /* NewsFeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedTableViewController.swift; sourceTree = "<group>"; };
 		E483CCF226680085003F23FD /* VKGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKGroups.swift; sourceTree = "<group>"; };
 		E483CCF62668061A003F23FD /* VKPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKPhoto.swift; sourceTree = "<group>"; };
 		E483CD0426680B8E003F23FD /* RealmUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmUser.swift; sourceTree = "<group>"; };
@@ -82,7 +85,6 @@
 		E483CD1426690C8F003F23FD /* PhotoRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoRealm.swift; sourceTree = "<group>"; };
 		E483CD1826728329003F23FD /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		E483CD1B267284A6003F23FD /* VKPhotoSizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKPhotoSizes.swift; sourceTree = "<group>"; };
-		E483CD3426749535003F23FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "VK GeekBrains/Base.lproj/Main.storyboard"; sourceTree = SOURCE_ROOT; };
 		E490575A26306D6200CB30F3 /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
 		E490575B26306D6200CB30F3 /* FriendCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendCell.xib; sourceTree = "<group>"; };
 		E490576426306F8B00CB30F3 /* AvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarImageView.swift; sourceTree = "<group>"; };
@@ -193,7 +195,7 @@
 				E490576326306F7000CB30F3 /* CustomView */,
 				E41E586F2622E61B00AB9343 /* Reusable */,
 				E49057692630A99100CB30F3 /* View.xib */,
-				E483CD3326749535003F23FD /* Main.storyboard */,
+				B4135AD02684FE7300C744C0 /* Main.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -208,6 +210,7 @@
 				E41E589026234DFF00AB9343 /* FriendsPhotoCollectionViewController.swift */,
 				E4C684F3264D76AA00BA8361 /* FullPhotoController.swift */,
 				E4C6850226579C6F00BA8361 /* VKLoginViewController.swift */,
+				E48257DF269360BB00849164 /* NewsFeedTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -337,7 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E41E584F26162E2200AB9343 /* LaunchScreen.storyboard in Resources */,
-				E483CD3526749535003F23FD /* Main.storyboard in Resources */,
+				B4135AD12684FE7300C744C0 /* Main.storyboard in Resources */,
 				E490576A2630A99100CB30F3 /* View.xib in Resources */,
 				E41E584C26162E2200AB9343 /* Assets.xcassets in Resources */,
 				E490575D26306D6200CB30F3 /* FriendCell.xib in Resources */,
@@ -421,6 +424,7 @@
 				E41E58752622E66F00AB9343 /* GroupCell.swift in Sources */,
 				E41E589126234DFF00AB9343 /* FriendsPhotoCollectionViewController.swift in Sources */,
 				E41E58712622E65400AB9343 /* UserCell.swift in Sources */,
+				E48257E0269360BC00849164 /* NewsFeedTableViewController.swift in Sources */,
 				E41E585C261B6BFC00AB9343 /* SomePage.swift in Sources */,
 				E4C6852326655EB700BA8361 /* VKItems.swift in Sources */,
 				E41E584526162E1F00AB9343 /* SceneDelegate.swift in Sources */,
@@ -444,14 +448,6 @@
 				E41E584E26162E2200AB9343 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		E483CD3326749535003F23FD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E483CD3426749535003F23FD /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

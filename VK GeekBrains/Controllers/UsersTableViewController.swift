@@ -37,6 +37,8 @@ class UsersTableViewController: UITableViewController {
     var sortedUsers: [Character: [User]] = [:]
     var firstLetters =  [Character]()
     
+    private var token: NotificationToken?
+    
     func sortUsers (_ users: [User]) -> (characters: [Character], sortedUsers: [Character: [User]]){
 
             var characters = [Character]()
@@ -62,7 +64,7 @@ class UsersTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        observeRealm()
     /*  networkService.getFriends(Session.instance.myID, "", "1", "first_name,last_name,photo_200_orig,id,last_seen") { [weak self] response in
             // 🚩Here
             self?.friendsData = response
@@ -80,40 +82,70 @@ class UsersTableViewController: UITableViewController {
         tableView.register(nib, forCellReuseIdentifier: "FriendCell")
         
         (firstLetters, sortedUsers) = sortUsers(friends)
-        
-       
     }
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return !isSearching ? firstLetters.count : 1
+    
+     private func observeRealm() {
+         token = users?.observe({ changes in
+             switch changes {
+             case .initial(let results):
+                 if results.count > 0 {
+                     self.tableView.reloadData()
+                 }
+                 
+             case let .update(results, deletions, insertions, modifications):
+                 break
+ //                self.tableView.reloadData()
+ //                self.tableView.reloadRows(at: <#T##[IndexPath]#>, with: <#T##UITableView.RowAnimation#>)
+ //                self.tableView.insertRows(at: <#T##[IndexPath]#>, with: <#T##UITableView.RowAnimation#>)
+             case .error(let error):
+                 print(error)
+             }
+         })
+     }
+     
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+       token?.invalidate()
     }
+    
+    
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        return !isSearching ? firstLetters.count : 1
+//    }
     
       override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-          if !isSearching {
-              let letter = firstLetters[section]
-            return sortedUsers[letter]?.count ?? 0
-          } else {
-              return searchFriends.count
-          }
+        users?.count ?? 0
+//          if !isSearching {
+//              let letter = firstLetters[section]
+//            return sortedUsers[letter]?.count ?? 0
+//          } else {
+//              return searchFriends.count
+//          }
       }
    
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "FriendCell", for: indexPath) as? FriendCell else { return UITableViewCell()}
-        
-        if !isSearching {
-            let letter = firstLetters[indexPath.section]
-            if let userArraybyKey = sortedUsers[letter] {
-                let currentUser = userArraybyKey[indexPath.row]
-                cell.configure(fullname: currentUser.fullname,
-                               image: currentUser.avatar)
-            }
-        } else {
-            let currentUser = searchFriends[indexPath.row]
-            cell.configure(fullname: currentUser.fullname,
-                           image: currentUser.avatar)
-        }
+        guard
+            let cell = tableView.dequeueReusableCell(withIdentifier: "FriendCell", for: indexPath) as? FriendCell,
+            let user = users?[indexPath.row]
+        else { return UITableViewCell()}
+        cell.configure(fullname: user.fullName, image: UIImage())
+        cell.friendPhotoImage.kf.setImage(with: URL(string: user.userAvatarURL))
+//        if !isSearching {
+//            let letter = firstLetters[indexPath.section]
+//            if let userArraybyKey = sortedUsers[letter] {
+//                let currentUser = userArraybyKey[indexPath.row]
+//                cell.configure(fullname: currentUser.fullname,
+//                               image: currentUser.avatar)
+//            }
+//        } else {
+//            let currentUser = searchFriends[indexPath.row]
+//            cell.configure(fullname: currentUser.fullname,
+//                           image: currentUser.avatar)
+//        }
         return cell
     }
     
@@ -125,9 +157,10 @@ class UsersTableViewController: UITableViewController {
         }
     }
     
-    override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+    /* override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
         firstLetters.map { "\($0)" }
     }
+    */
     
     /* override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard
@@ -154,7 +187,7 @@ class UsersTableViewController: UITableViewController {
         if !isSearching {
             let userLetter = firstLetters[indexPath.section]
             if let user = sortedUsers[userLetter]?[indexPath.row] {
-            //friendPhotosVC.userImages = [user.avatar]
+            friendPhotosVC.userImages = [user.avatar]
                 friendPhotosVC.userImages = user.images
             }
         } else {

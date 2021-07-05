@@ -6,7 +6,7 @@
 //
 
 import Foundation
-//import RealmSwift
+import RealmSwift
 
 /*class PhotoRealm: Object, Codable {
     @objc dynamic var id: Int = 0

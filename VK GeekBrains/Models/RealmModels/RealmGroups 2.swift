@@ -6,9 +6,9 @@
 //
 
 import Foundation
-//import RealmSwift
+import RealmSwift
 
-class GroupsRealm: Codable {
+class GroupsRealm: Object, Codable {
     @objc dynamic var id: Int = 0
     @objc dynamic var name: String = ""
     @objc dynamic var avatarURL: String = ""
